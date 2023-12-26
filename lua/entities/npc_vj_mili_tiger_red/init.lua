@@ -1,5 +1,5 @@
 AddCSLuaFile("shared.lua")
-include('shared.lua')
+include("shared.lua")
 /*-----------------------------------------------
 	*** Copyright (c) 2012-2023 by DrVrej, All rights reserved. ***
 	No parts of this code or any of its contents may be reproduced, copied, modified or adapted,
@@ -10,11 +10,11 @@ ENT.StartHealth = 500
 ---------------------------------------------------------------------------------------------------------------------------------------------
 ENT.VJ_NPC_Class = {"CLASS_GERMAN"} -- NPCs with the same class with be allied to each other
 
-ENT.SoundTbl_Idle = {"vj_mili_german/objectiveclear1.wav","vj_mili_german/objectiveclear2.wav","vj_mili_german/objectiveclear3.wav","vj_mili_german/objectiveclear4.wav","vj_mili_german/objectiveclear5.wav","vj_mili_german/spreadout1.wav","vj_mili_german/spreadout2.wav","vj_mili_german/sticktogether1.wav","vj_mili_german/sticktogether2.wav","vj_mili_german/statusreport1.wav","vj_mili_german/statusreport2.wav","vj_mili_german/raid_decoy1.wav","vj_mili_german/raid_decoy2.wav","vj_mili_german/raid_decoy3.wav","vj_mili_german/raid_decoy4.wav","vj_mili_german/raid_decoy5.wav"}
-ENT.SoundTbl_CombatIdle = {"vj_mili_german/ontheway1.wav","vj_mili_german/ontheway2.wav","vj_mili_german/ontheway3.wav","vj_mili_german/ontheway4.wav","vj_mili_german/go1.wav","vj_mili_german/go2.wav","vj_mili_german/go3.wav","vj_mili_german/go4.wav","vj_mili_german/moving1.wav","vj_mili_german/moving2.wav","vj_mili_german/moving3.wav","vj_mili_german/moving4.wav","vj_mili_german/moving5.wav"}
-ENT.SoundTbl_OnReceiveOrder = {"vj_mili_german/affirmative1.wav","vj_mili_german/affirmative2.wav","vj_mili_german/affirmative3.wav","vj_mili_german/affirmative4.wav"}
-ENT.SoundTbl_Alert = {"vj_mili_german/alert1.wav","vj_mili_german/alert2.wav","vj_mili_german/alert3.wav","vj_mili_german/alert4.wav","vj_mili_german/alert5.wav"}
-ENT.SoundTbl_CallForHelp = {"vj_mili_german/needbackup1.wav","vj_mili_german/needbackup2.wav","vj_mili_german/needbackup3.wav","vj_mili_german/needbackup4.wav","vj_mili_german/requestreinforcements1.wav","vj_mili_german/requestreinforcements2.wav","vj_mili_german/requestreinforcements3.wav","vj_mili_german/requestreinforcements4.wav"}
+ENT.SoundTbl_Idle = {"vj_military/german/objectiveclear1.wav","vj_military/german/objectiveclear2.wav","vj_military/german/objectiveclear3.wav","vj_military/german/objectiveclear4.wav","vj_military/german/objectiveclear5.wav","vj_military/german/spreadout1.wav","vj_military/german/spreadout2.wav","vj_military/german/sticktogether1.wav","vj_military/german/sticktogether2.wav","vj_military/german/statusreport1.wav","vj_military/german/statusreport2.wav","vj_military/german/raid_decoy1.wav","vj_military/german/raid_decoy2.wav","vj_military/german/raid_decoy3.wav","vj_military/german/raid_decoy4.wav","vj_military/german/raid_decoy5.wav"}
+ENT.SoundTbl_CombatIdle = {"vj_military/german/ontheway1.wav","vj_military/german/ontheway2.wav","vj_military/german/ontheway3.wav","vj_military/german/ontheway4.wav","vj_military/german/go1.wav","vj_military/german/go2.wav","vj_military/german/go3.wav","vj_military/german/go4.wav","vj_military/german/moving1.wav","vj_military/german/moving2.wav","vj_military/german/moving3.wav","vj_military/german/moving4.wav","vj_military/german/moving5.wav"}
+ENT.SoundTbl_OnReceiveOrder = {"vj_military/german/affirmative1.wav","vj_military/german/affirmative2.wav","vj_military/german/affirmative3.wav","vj_military/german/affirmative4.wav"}
+ENT.SoundTbl_Alert = {"vj_military/german/alert1.wav","vj_military/german/alert2.wav","vj_military/german/alert3.wav","vj_military/german/alert4.wav","vj_military/german/alert5.wav"}
+ENT.SoundTbl_CallForHelp = {"vj_military/german/needbackup1.wav","vj_military/german/needbackup2.wav","vj_military/german/needbackup3.wav","vj_military/german/needbackup4.wav","vj_military/german/requestreinforcements1.wav","vj_military/german/requestreinforcements2.wav","vj_military/german/requestreinforcements3.wav","vj_military/german/requestreinforcements4.wav"}
 
 -- Tank Base
 ENT.Tank_GunnerENT = "npc_vj_mili_tiger_redg"

@@ -8,6 +8,8 @@ ENT.Instructions 	= "Click on the spawnicon to spawn it."
 ENT.Category		= "Emplacements"
 
 if (CLIENT) then
+	local soldierMDLs = {"models/VJ_DODGERMANS/german_soldier1.mdl","models/VJ_DODGERMANS/german_soldier2.mdl","models/VJ_DODGERMANS/german_soldier3.mdl","models/VJ_DODGERMANS/german_soldier4.mdl","models/VJ_DODGERMANS/german_soldier5.mdl","models/VJ_DODGERMANS/german_soldier6.mdl"}
+	--
 	function ENT:CustomOnDraw()
 		if IsValid(self.NPCModel) then
 			local npc = self.NPCModel
@@ -15,7 +17,7 @@ if (CLIENT) then
 			npc:SetAngles(self:GetAngles())
 			npc:SetSequence("man_gun")
 		else
-			self.NPCModel = ClientsideModel("models/kriegsyntax/germans/heer/enlisted/npc_4.mdl")
+			self.NPCModel = ClientsideModel(VJ.PICK(soldierMDLs))
 		end
 	end
 	

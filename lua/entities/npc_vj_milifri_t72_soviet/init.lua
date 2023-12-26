@@ -1,19 +1,19 @@
 AddCSLuaFile("shared.lua")
-include('shared.lua')
+include("shared.lua")
 /*-----------------------------------------------
 	*** Copyright (c) 2012-2024 by DrVrej, All rights reserved. ***
 	No parts of this code or any of its contents may be reproduced, copied, modified or adapted,
 	without the prior written consent of the author, unless otherwise indicated for stand-alone materials.
 -----------------------------------------------*/
 ENT.Model = {"models/vehicles/t72_chasis.mdl"} -- The game will pick a random model from the table when the SNPC is spawned | Add as many as you want 
-ENT.StartHealth = GetConVarNumber("vj_milifri_t72_soviet_h")
+ENT.StartHealth = 500
 ---------------------------------------------------------------------------------------------------------------------------------------------
 ENT.VJ_NPC_Class = {"CLASS_RUSSIAN_FRIENDLY"} -- NPCs with the same class with be allied to each other
 ENT.PlayerFriendly = true -- Makes the SNPC friendly to the player and HL2 Resistance
 
-ENT.SoundTbl_Idle = {"mili_russian/idle1.wav","mili_russian/idle2.wav","mili_russian/idle3.wav","mili_russian/idle4.wav","mili_russian/idle5.wav","mili_russian/idle6.wav","mili_russian/idle7.wav","mili_russian/idle8.wav","mili_russian/idle9.wav","mili_russian/idle10.wav","mili_russian/idle11.wav","mili_russian/idle12.wav"}
-ENT.SoundTbl_Alert = {"mili_russian/alert1.wav","mili_russian/alert2.wav","mili_russian/alert3.wav","mili_russian/alert4.wav","mili_russian/alert5.wav","mili_russian/alert6.wav"}
-ENT.SoundTbl_CombatIdle = {"mili_russian/attack1.wav","mili_russian/attack2.wav","mili_russian/attack3.wav","mili_russian/attack4.wav","mili_russian/attack5.wav","mili_russian/attack6.wav","mili_russian/attack7.wav","mili_russian/attack8.wav","mili_russian/attack9.wav","mili_russian/attack10.wav","mili_russian/attack11.wav","mili_russian/attack12.wav"}
+ENT.SoundTbl_Idle = {"vj_military/russian/idle1.wav","vj_military/russian/idle2.wav","vj_military/russian/idle3.wav","vj_military/russian/idle4.wav","vj_military/russian/idle5.wav","vj_military/russian/idle6.wav","vj_military/russian/idle7.wav","vj_military/russian/idle8.wav","vj_military/russian/idle9.wav","vj_military/russian/idle10.wav","vj_military/russian/idle11.wav","vj_military/russian/idle12.wav"}
+ENT.SoundTbl_Alert = {"vj_military/russian/alert1.wav","vj_military/russian/alert2.wav","vj_military/russian/alert3.wav","vj_military/russian/alert4.wav","vj_military/russian/alert5.wav","vj_military/russian/alert6.wav"}
+ENT.SoundTbl_CombatIdle = {"vj_military/russian/attack1.wav","vj_military/russian/attack2.wav","vj_military/russian/attack3.wav","vj_military/russian/attack4.wav","vj_military/russian/attack5.wav","vj_military/russian/attack6.wav","vj_military/russian/attack7.wav","vj_military/russian/attack8.wav","vj_military/russian/attack9.wav","vj_military/russian/attack10.wav","vj_military/russian/attack11.wav","vj_military/russian/attack12.wav"}
 
 -- Custom
 ENT.Tank_GunnerENT = "npc_vj_milifri_t72_sovietg"
@@ -25,7 +25,7 @@ util.AddNetworkString("vj_mili_t72_spawneffects")
 util.AddNetworkString("vj_mili_t72_moveeffects")
 ---------------------------------------------------------------------------------------------------------------------------------------------
 function ENT:CustomInitialize_CustomTank()
-	if GetConVarNumber("vj_npc_noidleparticle") == 0 then
+	if GetConVar("vj_npc_noidleparticle"):GetInt() == 0 then
 		self.WhiteLight1 = ents.Create("env_sprite")
 		self.WhiteLight1:SetPos( self:GetPos() +self:GetForward()*-105 +self:GetRight()*35 +self:GetUp()*45 )
 		self.WhiteLight1:SetKeyValue( "renderfx", "14" )
@@ -108,8 +108,3 @@ function ENT:GetNearDeathSparkPositions()
 	if randpos == 7 then return self.Spark1:SetLocalPos(self:GetPos() +self:GetForward()*-20 +self:GetUp()*60 +self:GetRight()*-30) end
 	end
 end
-/*-----------------------------------------------
-	*** Copyright (c) 2012-2024 by DrVrej, All rights reserved. ***
-	No parts of this code or any of its contents may be reproduced, copied, modified or adapted,
-	without the prior written consent of the author, unless otherwise indicated for stand-alone materials.
------------------------------------------------*/

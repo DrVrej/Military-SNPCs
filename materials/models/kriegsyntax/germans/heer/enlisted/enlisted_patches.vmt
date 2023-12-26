@@ -1,6 +1,0 @@
-"VertexLitGeneric"
-{
-	"$basetexture"	"models\KriegSyntax\germans\heer\enlisted\enlisted_patches"
-	$translucent 1
-	$nocull 1
-}

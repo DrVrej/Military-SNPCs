@@ -1,5 +1,5 @@
 AddCSLuaFile("shared.lua")
-include('shared.lua')
+include("shared.lua")
 /*-----------------------------------------------
 	*** Copyright (c) 2012-2024 by DrVrej, All rights reserved. ***
 	No parts of this code or any of its contents may be reproduced, copied, modified or adapted, 
@@ -16,5 +16,5 @@ ENT.EntitiesToSpawn = {
 }
 ---------------------------------------------------------------------------------------------------------------------------------------------
 function ENT:CustomOnInitialize_BeforeNPCSpawn() 
-	self:EmitSound("mili_terrorist/terrorism"..math.random(1, 7)..".wav", 511, math.random(90, 100))
+	self:EmitSound("vj_military/arabic/terrorism"..math.random(1, 7)..".wav", 511, math.random(90, 100))
 end

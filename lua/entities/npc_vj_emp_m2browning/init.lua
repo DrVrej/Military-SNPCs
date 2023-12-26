@@ -1,5 +1,5 @@
 AddCSLuaFile("shared.lua")
-include('shared.lua')
+include("shared.lua")
 /*-----------------------------------------------
 	*** Copyright (c) 2012-2023 by DrVrej, All rights reserved. ***
 	No parts of this code or any of its contents may be reproduced, copied, modified or adapted,
@@ -23,7 +23,7 @@ ENT.NextRangeAttackTime = 0.05 -- How much time until it can use a range attack?
 ENT.DisableDefaultRangeAttackCode = true -- When true, it won't spawn the range attack entity, allowing you to make your own
 ENT.DisableRangeAttackAnimation = true -- if true, it will disable the animation code
 
-//ENT.SoundTbl_RangeAttack = {"vj_emplacements/m2/m2_tp.wav"}
+//ENT.SoundTbl_RangeAttack = {"vj_weapons/m2browning/m2_tp.wav"}
 
 ENT.RangeAttackPitch = VJ_Set(100, 100)
 ENT.RangeAttackSoundLevel = 80
@@ -77,7 +77,7 @@ function ENT:CustomOnThink()
 		if self.Emp_CurrentAmmo <= 0 && self.Emp_Reloading == false then
 			self.Emp_Reloading = true
 			self.ExtraGunModel:SetBodygroup(2, 1)
-			VJ_EmitSound(self, "vj_emplacements/m2/m2_reload.wav")
+			VJ_EmitSound(self, "vj_weapons/m2browning/m2_reload.wav")
 			self.ExtraGunModel:ResetSequence(self.ExtraGunModel:LookupSequence("reload"))
 			self.ExtraGunModel:ResetSequenceInfo()
 			self.ExtraGunModel:SetCycle(0)
@@ -180,8 +180,8 @@ function ENT:CustomRangeAttackCode()
 		end
 	self.ExtraGunModel:FireBullets(bullet)
 	
-	self:PlaySoundSystem("RangeAttack", "vj_emplacements/m2/m2_tp.wav", VJ_EmitSound)
-	VJ_EmitSound(self, "vj_emplacements/m2/m2_dist.wav", 110)
+	self:PlaySoundSystem("RangeAttack", "vj_weapons/m2browning/m2_tp.wav", VJ_EmitSound)
+	VJ_EmitSound(self, "vj_weapons/m2browning/m2_dist.wav", 110)
 	
 	ParticleEffectAttach("vj_rifle_full", PATTACH_POINT, self.ExtraGunModel, 1)
 	ParticleEffectAttach("muzzleflash_bar_3p", PATTACH_POINT, self.ExtraGunModel, 1)

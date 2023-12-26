@@ -1,20 +1,20 @@
 AddCSLuaFile("shared.lua")
-include('shared.lua')
+include("shared.lua")
 /*-----------------------------------------------
 	*** Copyright (c) 2012-2024 by DrVrej, All rights reserved. ***
 	No parts of this code or any of its contents may be reproduced, copied, modified or adapted,
 	without the prior written consent of the author, unless otherwise indicated for stand-alone materials.
 -----------------------------------------------*/
 ENT.Model = {"models/VJ_VEHICLES/m1abrams_chasis.mdl"} -- The game will pick a random model from the table when the SNPC is spawned | Add as many as you want 
-ENT.StartHealth = GetConVarNumber("npc_vj_mili_m1a1abramsdes_h")
+ENT.StartHealth = 500
 ---------------------------------------------------------------------------------------------------------------------------------------------
 ENT.VJ_NPC_Class = {"CLASS_UNITED_STATES"} -- NPCs with the same class with be allied to each other
 
-ENT.SoundTbl_Idle = {"mili_us1/idle1.wav","mili_us1/idle2.wav","mili_us1/idle3.wav","mili_us1/idle4.wav","mili_us1/idle5.wav","mili_us1/idle6.wav","mili_us1/idle7.wav","mili_us1/idle8.wav","mili_us1/idle9.wav","mili_us1/idle10.wav","mili_us1/idle11.wav","mili_us1/idle12.wav"}
-ENT.SoundTbl_OnReceiveOrder = {"mili_us1/yes1.wav","mili_us1/yes2.wav","mili_us1/yes3.wav","mili_us1/yes4.wav","mili_us1/yes5.wav","mili_us1/yes6.wav","mili_us1/yes7.wav","mili_us1/yes8.wav"}
-ENT.SoundTbl_Alert = {"mili_us1/alert1.wav","mili_us1/alert2.wav","mili_us1/alert3.wav","mili_us1/alert4.wav","mili_us1/alert5.wav","mili_us1/alert6.wav"}
-ENT.SoundTbl_CallForHelp = {"mili_us1/help1.wav","mili_us1/help2.wav","mili_us1/help3.wav","mili_us1/help4.wav","mili_us1/help5.wav","mili_us1/help6.wav","mili_us1/help7.wav","mili_us1/help8.wav"}
-ENT.SoundTbl_CombatIdle = {"mili_us1/attack1.wav","mili_us1/attack2.wav","mili_us1/attack3.wav","mili_us1/attack4.wav","mili_us1/attack5.wav","mili_us1/attack6.wav","mili_us1/attack7.wav","mili_us1/attack8.wav","mili_us1/attack9.wav"}
+ENT.SoundTbl_Idle = {"vj_military/english_american/idle1.wav","vj_military/english_american/idle2.wav","vj_military/english_american/idle3.wav","vj_military/english_american/idle4.wav","vj_military/english_american/idle5.wav","vj_military/english_american/idle6.wav","vj_military/english_american/idle7.wav","vj_military/english_american/idle8.wav","vj_military/english_american/idle9.wav","vj_military/english_american/idle10.wav","vj_military/english_american/idle11.wav","vj_military/english_american/idle12.wav"}
+ENT.SoundTbl_OnReceiveOrder = {"vj_military/english_american/yes1.wav","vj_military/english_american/yes2.wav","vj_military/english_american/yes3.wav","vj_military/english_american/yes4.wav","vj_military/english_american/yes5.wav","vj_military/english_american/yes6.wav","vj_military/english_american/yes7.wav","vj_military/english_american/yes8.wav"}
+ENT.SoundTbl_Alert = {"vj_military/english_american/alert1.wav","vj_military/english_american/alert2.wav","vj_military/english_american/alert3.wav","vj_military/english_american/alert4.wav","vj_military/english_american/alert5.wav","vj_military/english_american/alert6.wav"}
+ENT.SoundTbl_CallForHelp = {"vj_military/english_american/help1.wav","vj_military/english_american/help2.wav","vj_military/english_american/help3.wav","vj_military/english_american/help4.wav","vj_military/english_american/help5.wav","vj_military/english_american/help6.wav","vj_military/english_american/help7.wav","vj_military/english_american/help8.wav"}
+ENT.SoundTbl_CombatIdle = {"vj_military/english_american/attack1.wav","vj_military/english_american/attack2.wav","vj_military/english_american/attack3.wav","vj_military/english_american/attack4.wav","vj_military/english_american/attack5.wav","vj_military/english_american/attack6.wav","vj_military/english_american/attack7.wav","vj_military/english_american/attack8.wav","vj_military/english_american/attack9.wav"}
 
 -- Tank Base
 ENT.Tank_GunnerENT = "npc_vj_mili_m1a1abramsdesg"
@@ -27,7 +27,7 @@ util.AddNetworkString("vj_mili_tankm1a1_moveeffects")
 ---------------------------------------------------------------------------------------------------------------------------------------------
 function ENT:CustomInitialize_CustomTank()
 	self:SetSkin(1)
-	if GetConVarNumber("vj_npc_noidleparticle") == 0 then
+	if GetConVar("vj_npc_noidleparticle"):GetInt() == 0 then
 		self.WhiteLight1 = ents.Create("env_sprite")
 		self.WhiteLight1:SetPos( self:GetPos() +self:GetForward()*-150 +self:GetRight()*33 +self:GetUp()*50 )
 		self.WhiteLight1:SetKeyValue( "renderfx", "14" )
@@ -110,8 +110,3 @@ function ENT:GetNearDeathSparkPositions()
 	if randpos == 7 then return self.Spark1:SetLocalPos(self:GetPos() +self:GetForward()*-20 +self:GetUp()*60 +self:GetRight()*-30) end
 	end
 end
-/*-----------------------------------------------
-	*** Copyright (c) 2012-2024 by DrVrej, All rights reserved. ***
-	No parts of this code or any of its contents may be reproduced, copied, modified or adapted,
-	without the prior written consent of the author, unless otherwise indicated for stand-alone materials.
------------------------------------------------*/
