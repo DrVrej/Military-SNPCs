@@ -1,0 +1,5 @@
+"VertexLitGeneric"
+{
+	"$basetexture"	"models\KriegSyntax\germans\heer\enlisted\m34"
+	//"$bumpmap" "models\KriegSyntax\germans\heer\enlisted\m34_n"	
+}

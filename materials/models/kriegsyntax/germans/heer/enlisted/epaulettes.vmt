@@ -1,0 +1,5 @@
+"VertexLitGeneric"
+{
+	"$basetexture"	"models\KriegSyntax\germans\heer\enlisted\Epaulettes"
+	////"$bumpmap" "models\KriegSyntax\germans\heer\enlisted\Epaulettes_n"	
+}

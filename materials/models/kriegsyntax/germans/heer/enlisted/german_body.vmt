@@ -1,0 +1,11 @@
+"VertexLitGeneric"
+{
+	$basetexture			models\KriegSyntax\germans\heer\enlisted\german_body
+	$bumpmap				models\KriegSyntax\germans\heer\enlisted\german_body_n
+	$phongexponenttexture	models\KriegSyntax\germans\heer\enlisted\german_body_s
+
+	$phong					1
+	$phongexponent			5
+	$phongboost				2
+	$phongfresnelranges		"[0 0.5 1]"
+}

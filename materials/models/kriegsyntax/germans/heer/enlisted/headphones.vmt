@@ -1,0 +1,5 @@
+"VertexLitGeneric"
+{
+	"$basetexture"	"models\KriegSyntax\germans\heer\enlisted\headphones"
+	////"$bumpmap" "models\KriegSyntax\germans\heer\enlisted\headphones_n"	
+}

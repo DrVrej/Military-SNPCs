@@ -1,0 +1,6 @@
+"VertexLitGeneric"
+{
+	"$basetexture"	"models\KriegSyntax\germans\heer\enlisted\litzen"
+	$translucent 1
+	$nocull 1
+}

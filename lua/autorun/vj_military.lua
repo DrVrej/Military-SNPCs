@@ -1,0 +1,280 @@
+------------------ Addon Information ------------------
+local AddonName = "Military SNPCs"
+local AddonType = "NPC"
+-------------------------------------------------------
+local VJExists = file.Exists("lua/autorun/vj_base_autorun.lua",  "GAME")
+if VJExists == true then
+	include('autorun/vj_controls.lua')
+
+	local spawnCategory = "Military" -- Category, you can also set a category individually by replacing the spawnCategory with a string value
+	
+	-- Enemy
+		-- United States of America
+		VJ.AddNPC_HUMAN("U.S. Marine (Enemy)", "npc_vj_mili_marine", {"weapon_vj_m16a1"}, spawnCategory)
+		VJ.AddNPC_HUMAN("U.S. Ranger (Enemy)", "npc_vj_mili_ranger", {"weapon_vj_m16a1", "weapon_vj_m16a1", "weapon_vj_m16a1", "weapon_vj_spas12"}, spawnCategory)
+		VJ.AddNPC_HUMAN("U.S. Airborne (Enemy)", "npc_vj_mili_airborne", {"weapon_vj_us_thompson", "weapon_vj_us_m1garand", "weapon_vj_us_m1garand", "weapon_vj_us_m1garand"}, spawnCategory)
+		VJ.AddNPC("M1 Abrams Woodland (Enemy)", "npc_vj_mili_m1a1abrams", spawnCategory)
+		VJ.AddNPC("M1 Abrams Desert (Enemy)", "npc_vj_mili_m1a1abramsdes", spawnCategory)
+		VJ.AddNPC("Random U.S. Infantry (Enemy)", "sent_vj_mili_randus", spawnCategory)
+		VJ.AddNPC("M2 Browning Emplacement (Enemy)",  "npc_vj_emp_m2browning", spawnCategory)
+		-- Germany
+		VJ.AddNPC_HUMAN("Wehrmacht Infantry (Enemy)", "npc_vj_mili_wehrmacht", {"weapon_vj_mp40", "weapon_vj_nz_karabiner98k", "weapon_vj_nz_karabiner98k", "weapon_vj_nz_karabiner98k"}, spawnCategory)
+		VJ.AddNPC_HUMAN("German Infantry (Enemy)", "npc_vj_mili_german", {"weapon_vj_mp40", "weapon_vj_nz_karabiner98k", "weapon_vj_nz_karabiner98k", "weapon_vj_nz_karabiner98k"}, spawnCategory)
+		VJ.AddNPC_HUMAN("Panzergrenadier (Enemy)", "npc_vj_mili_pzgrenadier", {"weapon_vj_mp40", "weapon_vj_nz_karabiner98k", "weapon_vj_nz_karabiner98k"}, spawnCategory)
+		VJ.AddNPC_HUMAN("Waffen-SS (Enemy)", "npc_vj_mili_waffenss", {"weapon_vj_mp40"}, spawnCategory)
+		VJ.AddNPC("Tiger (Enemy)", "npc_vj_mili_tiger_red", spawnCategory)
+		VJ.AddNPC("Random German Infantry (Enemy)", "sent_vj_mili_randger", spawnCategory)
+		VJ.AddNPC("MG 42 Emplacement (Enemy)",  "npc_vj_emp_mg42", spawnCategory)
+		-- Soviet
+		VJ.AddNPC_HUMAN("Soviet Infantry (Enemy)", "npc_vj_mili_soviet", {"weapon_vj_sov_mosinnagant", "weapon_vj_sov_mosinnagant", "weapon_vj_sov_mosinnagant", "weapon_vj_sov_ppsh41"}, spawnCategory)
+		VJ.AddNPC_HUMAN("Soviet Spetsnaz (Enemy)", "npc_vj_mili_soviet_spetsnaz", {"weapon_vj_ak47", "weapon_vj_sov_ppsh41"}, spawnCategory)
+		VJ.AddNPC("Soviet T-72 (Enemy)", "npc_vj_mili_t72_soviet", spawnCategory)
+		VJ.AddNPC("Random Soviet Infantry (Enemy)", "sent_vj_mili_randsoviet", spawnCategory)
+		-- Insurgents
+		VJ.AddNPC_HUMAN("Terrorist (Enemy)", "npc_vj_mili_terrorist", {"weapon_vj_rpg", "weapon_vj_rpg", "weapon_vj_ak47", "weapon_vj_ak47", "weapon_vj_ak47", "weapon_vj_m16a1", "weapon_vj_m16a1", "weapon_vj_m16a1", "weapon_vj_mp40", "weapon_vj_mp40", "weapon_vj_mp40", "weapon_vj_smg1", "weapon_vj_smg1", "weapon_vj_smg1", "weapon_vj_spas12", "weapon_vj_spas12", "weapon_vj_spas12"}, spawnCategory)
+		VJ.AddNPC("ChicLeet (Enemy)", "npc_vj_mili_chicleet", spawnCategory)
+		VJ.AddNPC("Terrorist T-72 (Enemy)", "npc_vj_mili_t72_terrorist", spawnCategory)
+		VJ.AddNPC("Terrorism (Enemy)", "sent_vj_mili_terrorism", spawnCategory)
+		
+	-- Friendly
+		-- United States of America
+		VJ.AddNPC_HUMAN("U.S. Marine (Friendly)", "npc_vj_milifri_marine", {"weapon_vj_m16a1"}, spawnCategory)
+		VJ.AddNPC_HUMAN("U.S. Ranger (Friendly)", "npc_vj_milifri_ranger", {"weapon_vj_m16a1", "weapon_vj_m16a1", "weapon_vj_m16a1", "weapon_vj_spas12"}, spawnCategory)
+		VJ.AddNPC_HUMAN("U.S. Airborne (Friendly)", "npc_vj_milifri_airborne", {"weapon_vj_us_thompson", "weapon_vj_us_m1garand", "weapon_vj_us_m1garand", "weapon_vj_us_m1garand"}, spawnCategory)
+		VJ.AddNPC("M1 Abrams Woodland (Friendly)", "npc_vj_milifri_m1a1abrams", spawnCategory)
+		VJ.AddNPC("M1 Abrams Desert (Friendly)", "npc_vj_milifri_m1a1abramsdes", spawnCategory)
+		VJ.AddNPC("Random U.S. Infantry (Friendly)", "sent_vj_milifri_randus", spawnCategory)
+		VJ.AddNPC("M2 Browning Emplacement (Friendly)",  "npc_vj_empfri_m2browning", spawnCategory)
+		-- Germany
+		VJ.AddNPC_HUMAN("Wehrmacht Infantry (Friendly)", "npc_vj_milifri_wehrmacht", {"weapon_vj_mp40", "weapon_vj_nz_karabiner98k", "weapon_vj_nz_karabiner98k", "weapon_vj_nz_karabiner98k"}, spawnCategory)
+		VJ.AddNPC_HUMAN("German Infantry (Friendly)", "npc_vj_milifri_german", {"weapon_vj_mp40", "weapon_vj_nz_karabiner98k", "weapon_vj_nz_karabiner98k", "weapon_vj_nz_karabiner98k"}, spawnCategory)
+		VJ.AddNPC_HUMAN("Panzergrenadier (Friendly)", "npc_vj_milifri_pzgrenadier", {"weapon_vj_mp40", "weapon_vj_nz_karabiner98k", "weapon_vj_nz_karabiner98k"}, spawnCategory)
+		VJ.AddNPC_HUMAN("Waffen-SS (Friendly)", "npc_vj_milifri_waffenss", {"weapon_vj_mp40", "weapon_vj_nz_karabiner98k"}, spawnCategory)
+		VJ.AddNPC("Tiger (Friendly)", "npc_vj_milifri_tiger_red", spawnCategory)
+		VJ.AddNPC("Random German Infantry (Friendly)", "sent_vj_milifri_randger", spawnCategory)
+		VJ.AddNPC("MG 42 Emplacement (Friendly)",  "npc_vj_empfri_mg42", spawnCategory)
+		-- Soviet
+		VJ.AddNPC_HUMAN("Soviet Infantry (Friendly)", "npc_vj_milifri_soviet", {"weapon_vj_sov_mosinnagant", "weapon_vj_sov_mosinnagant", "weapon_vj_sov_mosinnagant", "weapon_vj_sov_ppsh41"}, spawnCategory)
+		VJ.AddNPC_HUMAN("Soviet Spetsnaz (Friendly)", "npc_vj_milifri_soviet_spetsnaz", {"weapon_vj_ak47", "weapon_vj_sov_ppsh41"}, spawnCategory)
+		VJ.AddNPC("Soviet T-72 (Friendly)", "npc_vj_milifri_t72_soviet", spawnCategory)
+		VJ.AddNPC("Random Soviet Infantry (Friendly)", "sent_vj_milifri_randsoviet", spawnCategory)
+		-- Insurgents
+		VJ.AddNPC_HUMAN("Terrorist (Friendly)", "npc_vj_milifri_terrorist", {"weapon_vj_rpg", "weapon_vj_rpg", "weapon_vj_ak47", "weapon_vj_ak47", "weapon_vj_ak47", "weapon_vj_m16a1", "weapon_vj_m16a1", "weapon_vj_m16a1", "weapon_vj_mp40", "weapon_vj_mp40", "weapon_vj_mp40", "weapon_vj_smg1", "weapon_vj_smg1", "weapon_vj_smg1", "weapon_vj_spas12", "weapon_vj_spas12", "weapon_vj_spas12"}, spawnCategory)
+		VJ.AddNPC("ChicLeet (Friendly)", "npc_vj_milifri_chicleet", spawnCategory)
+		VJ.AddNPC("Terrorist T-72 (Friendly)", "npc_vj_milifri_t72_terrorist", spawnCategory)
+		VJ.AddNPC("Terrorism (Friendly)", "sent_vj_milifri_terrorism", spawnCategory)
+
+	-- Weapons
+	VJ.AddNPCWeapon("VJ_US_Thompson",  "weapon_vj_us_thompson")
+	VJ.AddNPCWeapon("VJ_US_M1 Garand",  "weapon_vj_us_m1garand")
+	VJ.AddNPCWeapon("VJ_NZ_Karabiner 98k",  "weapon_vj_nz_karabiner98k")
+	VJ.AddNPCWeapon("VJ_Sov_Mosin-Nagant",  "weapon_vj_sov_mosinnagant")
+	VJ.AddNPCWeapon("VJ_Sov_PSSh-41",  "weapon_vj_sov_ppsh41")
+	
+	-- Particles --
+	VJ.AddParticle("particles/doi_weapon_fx.pcf", {
+		"muzzleflash_bar_3p", 
+		"muzzleflash_garand_3p", 
+	})
+	
+	VJ.AddParticle("particles/doi_impact_fx.pcf", {
+		"doi_impact_concrete", 
+		"doi_impact_dirt", 
+		"doi_impact_glass", 
+		"doi_impact_metal", 
+		"doi_impact_sand", 
+		"doi_impact_snow", 
+		"doi_impact_leaves", 
+		"doi_impact_wood", 
+		"doi_impact_grass", 
+		"doi_impact_tile", 
+		"doi_impact_plastic", 
+		"doi_impact_rock", 
+		"doi_impact_gravel", 
+		"doi_impact_mud", 
+		"doi_impact_fruit", 
+		"doi_impact_asphalt", 
+		"doi_impact_cardboard", 
+		"doi_impact_rubber", 
+		"doi_impact_carpet", 
+		"doi_impact_brick", 
+		"doi_impact_paper", 
+		"doi_impact_computer", 
+	})
+	
+	-- Precache Models --
+	util.PrecacheModel("models/VJ_HGRUNT/hgrunt1.mdl")
+	util.PrecacheModel("models/VJ_HGRUNT/hgrunt2.mdl")
+	util.PrecacheModel("models/VJ_HGRUNT/hgrunt3.mdl")
+	util.PrecacheModel("models/VJ_HGRUNT/hgrunt4.mdl")
+	util.PrecacheModel("models/VJ_HGRUNT/hgrunt5.mdl")
+	util.PrecacheModel("models/VJ_UNITEDSTATES/airbrone1.mdl")
+	util.PrecacheModel("models/VJ_UNITEDSTATES/airbrone2.mdl")
+	util.PrecacheModel("models/VJ_UNITEDSTATES/airbrone3.mdl")
+	util.PrecacheModel("models/VJ_UNITEDSTATES/airbrone4.mdl")
+	util.PrecacheModel("models/VJ_UNITEDSTATES/airbrone5.mdl")
+	util.PrecacheModel("models/VJ_UNITEDSTATES/airbrone6.mdl")
+	util.PrecacheModel("models/VJ_UNITEDSTATES/airbrone7.mdl")
+	util.PrecacheModel("models/VJ_UNITEDSTATES/airbrone8.mdl")
+	util.PrecacheModel("models/VJ_UNITEDSTATES/airbrone9.mdl")
+	
+	util.PrecacheModel("models/VJ_DODGERMANS/german_soldier1.mdl")
+	util.PrecacheModel("models/VJ_DODGERMANS/german_soldier2.mdl")
+	util.PrecacheModel("models/VJ_DODGERMANS/german_soldier3.mdl")
+	util.PrecacheModel("models/VJ_DODGERMANS/german_soldier4.mdl")
+	util.PrecacheModel("models/VJ_DODGERMANS/german_soldier5.mdl")
+	util.PrecacheModel("models/VJ_DODGERMANS/german_soldier6.mdl")
+	util.PrecacheModel("models/VJ_WAFFEN/german_soldier1.mdl")
+	util.PrecacheModel("models/VJ_WAFFEN/german_soldier2.mdl")
+	util.PrecacheModel("models/VJ_WAFFEN/german_soldier3.mdl")
+	util.PrecacheModel("models/VJ_WAFFEN/german_soldier4.mdl")
+	util.PrecacheModel("models/VJ_WAFFEN/german_soldier5.mdl")
+	util.PrecacheModel("models/VJ_WAFFEN/german_soldier6.mdl")
+	
+	util.PrecacheModel("models/soviet/soviet_soldier1.mdl")
+	util.PrecacheModel("models/soviet/soviet_soldier2.mdl")
+	util.PrecacheModel("models/soviet/soviet_soldier3.mdl")
+	util.PrecacheModel("models/soviet/soviet_soldier4.mdl")
+	util.PrecacheModel("models/soviet/soviet_soldier5.mdl")
+	util.PrecacheModel("models/soviet/soviet_soldier6.mdl")
+	
+	util.PrecacheModel("models/VJ_Terrorist/2hemagh.mdl")
+	util.PrecacheModel("models/VJ_Terrorist/2kimasked.mdl")
+	util.PrecacheModel("models/VJ_Terrorist/3hemagh.mdl")
+	util.PrecacheModel("models/VJ_Terrorist/shemagh.mdl")
+	util.PrecacheModel("models/VJ_Terrorist/shemagh_helmet.mdl")
+	util.PrecacheModel("models/VJ_Terrorist/skimasked.mdl")
+	util.PrecacheModel("models/VJ_Terrorist/unmasked1.mdl")
+	util.PrecacheModel("models/VJ_Terrorist/unmasked2.mdl")
+	
+	-- ConVars --
+	-- Enemy
+	VJ.AddConVar("vj_mili_ranger_h", 80)
+	VJ.AddConVar("vj_mili_ranger_d", 15)
+
+	VJ.AddConVar("vj_mili_marine_h", 60)
+	VJ.AddConVar("vj_mili_marine_d", 10)
+
+	VJ.AddConVar("vj_mili_airborne_h", 60)
+	VJ.AddConVar("vj_mili_airborne_d", 10)
+
+	VJ.AddConVar("npc_vj_mili_m1a1abrams_h", 500)
+
+	VJ.AddConVar("npc_vj_mili_m1a1abramsdes_h", 500)
+
+	-- Friendly
+	VJ.AddConVar("vj_milifri_ranger_h", 80)
+	VJ.AddConVar("vj_milifri_ranger_d", 15)
+
+	VJ.AddConVar("vj_milifri_marine_h", 60)
+	VJ.AddConVar("vj_milifri_marine_d", 10)
+
+	VJ.AddConVar("vj_milifri_airborne_h", 60)
+	VJ.AddConVar("vj_milifri_airborne_d", 10)
+
+	VJ.AddConVar("npc_vj_milifri_m1a1abrams_h", 500)
+
+	VJ.AddConVar("npc_vj_milifri_m1a1abramsdes_h", 500)
+	
+	-- Enemy
+	VJ.AddConVar("vj_mili_soviet_h", 60)
+	VJ.AddConVar("vj_mili_soviet_d", 10)
+
+	VJ.AddConVar("vj_mili_soviet_spetsnaz_h", 80)
+	VJ.AddConVar("vj_mili_soviet_spetsnaz_d", 15)
+
+	VJ.AddConVar("vj_mili_t72_soviet_h", 500)
+
+	-- Friendly
+	VJ.AddConVar("vj_milifri_t72_soviet_h", 500)
+	
+	VJ.AddConVar("vj_milifri_soviet_h", 60)
+	VJ.AddConVar("vj_milifri_soviet_d", 10)
+
+	VJ.AddConVar("vj_milifri_soviet_spetsnaz_h", 80)
+	VJ.AddConVar("vj_milifri_soviet_spetsnaz_d", 15)
+	
+	-- Enemy
+	VJ.AddConVar("vj_mili_terrorist_h", 60)
+	VJ.AddConVar("vj_mili_terrorist_d", 10)
+
+	VJ.AddConVar("vj_mili_chicleet_h", 200)
+	VJ.AddConVar("vj_mili_chicleet_d", 30)
+
+	VJ.AddConVar("npc_vj_mili_terroristt72_h", 500)
+
+	-- Friendly
+	VJ.AddConVar("vj_milifri_terrorist_h", 60)
+	VJ.AddConVar("vj_milifri_terrorist_d", 10)
+
+	VJ.AddConVar("vj_milifri_chicleet_h", 200)
+	VJ.AddConVar("vj_milifri_chicleet_d", 30)
+
+	VJ.AddConVar("npc_vj_milifri_terroristt72_h", 500)
+	
+-- !!!!!! DON'T TOUCH ANYTHING BELOW THIS !!!!!! -------------------------------------------------------------------------------------------------------------------------
+	AddCSLuaFile()
+	VJ.AddAddonProperty(AddonName, AddonType)
+else
+	if CLIENT then
+		chat.AddText(Color(0, 200, 200), AddonName,
+		Color(0, 255, 0), " was unable to install, you are missing ", 
+		Color(255, 100, 0), "VJ Base!")
+	end
+	
+	timer.Simple(1, function()
+		if not VJBASE_ERROR_MISSING then
+			VJBASE_ERROR_MISSING = true
+			if CLIENT then
+				// Get rid of old error messages from addons running on older code...
+				if VJF && type(VJF) == "Panel" then
+					VJF:Close()
+				end
+				VJF = true
+				
+				local frame = vgui.Create("DFrame")
+				frame:SetSize(600, 160)
+				frame:SetPos((ScrW() - frame:GetWide()) / 2, (ScrH() - frame:GetTall()) / 2)
+				frame:SetTitle("Error: VJ Base is missing!")
+				frame:SetBackgroundBlur(true)
+				frame:MakePopup()
+	
+				local labelTitle = vgui.Create("DLabel",  frame)
+				labelTitle:SetPos(250, 30)
+				labelTitle:SetText("VJ BASE IS MISSING!")
+				labelTitle:SetTextColor(Color(255,128,128))
+				labelTitle:SizeToContents()
+				
+				local label1 = vgui.Create("DLabel",  frame)
+				label1:SetPos(170, 50)
+				label1:SetText("Garry's Mod was unable to find VJ Base in your files!")
+				label1:SizeToContents()
+				
+				local label2 = vgui.Create("DLabel",  frame)
+				label2:SetPos(10, 70)
+				label2:SetText("You have an addon installed that requires VJ Base but VJ Base is missing. To install VJ Base, click on the link below. Once\n                                                   installed, make sure it is enabled and then restart your game.")
+				label2:SizeToContents()
+				
+				local link = vgui.Create("DLabelURL",  frame)
+				link:SetSize(300, 20)
+				link:SetPos(195, 100)
+				link:SetText("VJ_Base_Download_Link_(Steam_Workshop)")
+				link:SetURL("https://steamcommunity.com/sharedfiles/filedetails/?id=131759821")
+				
+				local buttonClose = vgui.Create("DButton",  frame)
+				buttonClose:SetText("CLOSE")
+				buttonClose:SetPos(260, 120)
+				buttonClose:SetSize(80, 35)
+				buttonClose.DoClick = function()
+					frame:Close()
+				end
+			elseif (SERVER) then
+				VJF = true
+				timer.Remove("VJBASEMissing")
+				timer.Create("VJBASE_ERROR_CONFLICT",  5, 0, function()
+					print("VJ Base is missing! Download it from the Steam Workshop! Link: https://steamcommunity.com/sharedfiles/filedetails/?id=131759821")
+				end)
+			end
+		end
+	end)
+end
