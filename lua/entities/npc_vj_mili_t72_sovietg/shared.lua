@@ -5,16 +5,8 @@ ENT.Author 			= "DrVrej"
 ENT.Contact 		= "http://steamcommunity.com/groups/vrejgaming"
 ENT.Purpose 		= "Spawn it and fight with it!"
 ENT.Instructions 	= "Click on the spawnicon to spawn it."
-ENT.Category		= "Soviet Union"
+ENT.Category		= "Military"
 
-if (CLIENT) then
-local Name = "Enemy Soviet T-72"
-local LangName = "npc_vj_mili_t72_sovietg"
-language.Add(LangName, Name)
-killicon.Add(LangName,"HUD/killicons/default",Color(255,80,0,255))
-language.Add("#"..LangName, Name)
-killicon.Add("#"..LangName,"HUD/killicons/default",Color(255,80,0,255))
-end
 ---------------------------------------------------------------------------------------------------------------------------------------------
 net.Receive("vj_mili_t72g_shooteffects", function()
 	local ent = net.ReadEntity()

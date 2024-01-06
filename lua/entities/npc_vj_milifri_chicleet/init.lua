@@ -9,7 +9,7 @@ ENT.Model = {"models/VJ_Terrorist/chicleet.mdl"} -- The game will pick a random 
 ENT.StartHealth = 200
 ENT.HullType = HULL_HUMAN
 ---------------------------------------------------------------------------------------------------------------------------------------------
-ENT.VJ_NPC_Class = {"CLASS_TERRORIST_FRIENDLY"} -- NPCs with the same class with be allied to each other
+ENT.VJ_NPC_Class = {"CLASS_TERRORIST_FRIENDLY", "CLASS_PLAYER_ALLY"} -- NPCs with the same class with be allied to each other
 ENT.BloodColor = "Red" -- The blood type, this will determine what it should use (decal, particle, etc.)
 ENT.HasMeleeAttack = true -- Should the SNPC have a melee attack?
 ENT.MeleeAttackDamage = 30
@@ -19,9 +19,7 @@ ENT.MeleeAttackDamageDistance = 120 -- How far does the damage go?
 ENT.TimeUntilMeleeAttackDamage = 0.6 -- This counted in seconds | This calculates the time until it hits something
 ENT.NextAnyAttackTime_Melee = 0.4 -- How much time until it can use any attack again? | Counted in Seconds
 ENT.DisableDefaultMeleeAttackDamageCode = false -- Disables the default melee attack damage code
-ENT.PlayerFriendly = true -- Makes the SNPC friendly to the player and HL2 Resistance
 ENT.HasDeathRagdoll = false -- If set to false, it will not spawn the regular ragdoll of the SNPC
-ENT.FollowPlayer = true -- Should the SNPC follow the player when the player presses a certain key?
 ENT.GibOnDeathDamagesTable = {"All"} -- Damages that it gibs from | "UseDefault" = Uses default damage types | "All" = Gib from any damage
 	-- ====== Sound File Paths ====== --
 -- Leave blank if you don't want any sounds to play

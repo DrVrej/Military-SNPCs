@@ -6,4 +6,4 @@ include("shared.lua")
 	without the prior written consent of the author, unless otherwise indicated for stand-alone materials.
 -----------------------------------------------*/
 ---------------------------------------------------------------------------------------------------------------------------------------------
-ENT.VJ_NPC_Class = {"CLASS_GERMAN_FRIENDLY","CLASS_PLAYER_ALLY"}
+ENT.VJ_NPC_Class = {"CLASS_GERMAN_FRIENDLY", "CLASS_PLAYER_ALLY"}

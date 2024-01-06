@@ -8,8 +8,7 @@ include("shared.lua")
 ENT.Model = {"models/VJ_VEHICLES/m1abrams_turret.mdl"} -- The game will pick a random model from the table when the SNPC is spawned | Add as many as you want 
 ENT.StartHealth = 0
 ---------------------------------------------------------------------------------------------------------------------------------------------
-ENT.VJ_NPC_Class = {"CLASS_UNITED_STATES_FRIENDLY"} -- NPCs with the same class with be allied to each other
-ENT.PlayerFriendly = true -- Makes the SNPC friendly to the player and HL2 Resistance
+ENT.VJ_NPC_Class = {"CLASS_UNITED_STATES_FRIENDLY", "CLASS_PLAYER_ALLY"} -- NPCs with the same class with be allied to each other
 ENT.FriendsWithAllPlayerAllies = true -- Should this SNPC be friends with all other player allies that are running on VJ Base?
 
 -- Tank Base

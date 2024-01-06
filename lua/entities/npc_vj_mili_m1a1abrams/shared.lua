@@ -5,16 +5,8 @@ ENT.Author 			= "DrVrej"
 ENT.Contact 		= "http://steamcommunity.com/groups/vrejgaming"
 ENT.Purpose 		= "Spawn it and fight with it!"
 ENT.Instructions 	= "Click on the spawnicon to spawn it."
-ENT.Category		= "United States Army"
- 
-if CLIENT then
-local Name = "Enemy M1 Abrams Woodland"
-local LangName = "npc_vj_mili_m1a1abrams"
-language.Add(LangName, Name)
-killicon.Add(LangName,"HUD/killicons/default",Color(255,80,0,255))
-language.Add("#"..LangName, Name)
-killicon.Add("#"..LangName,"HUD/killicons/default",Color(255,80,0,255))
-end
+ENT.Category		= "Military"
+
 ---------------------------------------------------------------------------------------------------------------------------------------------
 net.Receive("vj_mili_tankm1a1_spawneffects", function()
 	local ent = net.ReadEntity()
