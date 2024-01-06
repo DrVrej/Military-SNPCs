@@ -10,7 +10,8 @@ ENT.Category		= "Emplacements"
 if (CLIENT) then
 	local soldierMDLs = {"models/VJ_UNITEDSTATES/airbrone1.mdl","models/VJ_UNITEDSTATES/airbrone2.mdl","models/VJ_UNITEDSTATES/airbrone3.mdl","models/VJ_UNITEDSTATES/airbrone4.mdl","models/VJ_UNITEDSTATES/airbrone5.mdl","models/VJ_UNITEDSTATES/airbrone6.mdl","models/VJ_UNITEDSTATES/airbrone7.mdl","models/VJ_UNITEDSTATES/airbrone8.mdl","models/VJ_UNITEDSTATES/airbrone9.mdl"}
 	--
-	function ENT:CustomOnDraw()
+	function ENT:Draw()
+		self:DrawModel()
 		if IsValid(self.NPCModel) then
 			local npc = self.NPCModel
 			npc:SetPos(self:GetPos() + self:GetForward()*-40 + self:GetUp()*-2)

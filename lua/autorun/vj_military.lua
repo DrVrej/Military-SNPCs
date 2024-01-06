@@ -72,12 +72,21 @@ if VJExists == true then
 	VJ.AddNPCWeapon("VJ_Sov_PSSh-41", "weapon_vj_sov_ppsh41")
 	
 	-- Particles --
-	VJ.AddParticle("particles/doi_weapon_fx.pcf", {
-		"muzzleflash_bar_3p",
-		"muzzleflash_garand_3p",
+	VJ.AddParticle("particles/vj_military_fx.pcf", {
+		"vj_military_muzzle_bar",
+		"vj_military_muzzle_bar_core1",
+		"vj_military_muzzle_bar_core2",
+		"vj_military_muzzle_bar_flame",
+		"vj_military_muzzle_garand",
+		"vj_military_muzzle_garand_core1",
+		"vj_military_muzzle_garand_core2",
+		"vj_military_muzzle_garand_flame",
+		"vj_military_muzzle_smoke",
+		"vj_military_muzzle_spark1",
+		"vj_military_muzzle_spark2",
 	})
 	
-	VJ.AddParticle("particles/doi_impact_fx.pcf", {
+	/*VJ.AddParticle("particles/doi_impact_fx.pcf", {
 		"doi_impact_concrete",
 		"doi_impact_dirt",
 		"doi_impact_glass",
@@ -100,7 +109,7 @@ if VJExists == true then
 		"doi_impact_brick",
 		"doi_impact_paper",
 		"doi_impact_computer",
-	})
+	})*/
 	
 	-- Precache Models --
 	util.PrecacheModel("models/VJ_HGRUNT/hgrunt1.mdl")
