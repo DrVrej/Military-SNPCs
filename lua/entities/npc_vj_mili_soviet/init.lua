@@ -33,5 +33,5 @@ ENT.SoundTbl_Death = {"vj_military/russian/die1.wav","vj_military/russian/die2.w
 ENT.IdleSoundLevel = 85
 ---------------------------------------------------------------------------------------------------------------------------------------------
 function ENT:CustomOnInitialize()
-	if math.random(1,5) == 1 then self.IsMedicSNPC = true end
+	if math.random(1, 5) == 1 then self.IsMedicSNPC = true end
 end

@@ -8,7 +8,7 @@ include("shared.lua")
 ENT.Model = {"models/VJ_VEHICLES/m1abrams_chasis.mdl"} -- The game will pick a random model from the table when the SNPC is spawned | Add as many as you want 
 ENT.StartHealth = 500
 ---------------------------------------------------------------------------------------------------------------------------------------------
-ENT.VJ_NPC_Class = {"CLASS_UNITED_STATES"} -- NPCs with the same class with be allied to each other\
+ENT.VJ_NPC_Class = {"CLASS_UNITED_STATES"} -- NPCs with the same class with be allied to each other
 
 ENT.SoundTbl_Idle = {"vj_military/english_american/idle1.wav","vj_military/english_american/idle2.wav","vj_military/english_american/idle3.wav","vj_military/english_american/idle4.wav","vj_military/english_american/idle5.wav","vj_military/english_american/idle6.wav","vj_military/english_american/idle7.wav","vj_military/english_american/idle8.wav","vj_military/english_american/idle9.wav","vj_military/english_american/idle10.wav","vj_military/english_american/idle11.wav","vj_military/english_american/idle12.wav"}
 ENT.SoundTbl_OnReceiveOrder = {"vj_military/english_american/yes1.wav","vj_military/english_american/yes2.wav","vj_military/english_american/yes3.wav","vj_military/english_american/yes4.wav","vj_military/english_american/yes5.wav","vj_military/english_american/yes6.wav","vj_military/english_american/yes7.wav","vj_military/english_american/yes8.wav"}
@@ -22,8 +22,6 @@ ENT.Tank_CollisionBoundSize = 90
 ENT.Tank_CollisionBoundUp = 100
 ENT.Tank_DeathSoldierModels = {"models/VJ_HGRUNT/hgrunt1.mdl","models/VJ_HGRUNT/hgrunt2.mdl","models/VJ_HGRUNT/hgrunt3.mdl","models/VJ_HGRUNT/hgrunt4.mdl","models/VJ_HGRUNT/hgrunt5.mdl"}
 
-util.AddNetworkString("vj_mili_tankm1a1_spawneffects")
-util.AddNetworkString("vj_mili_tankm1a1_moveeffects")
 ---------------------------------------------------------------------------------------------------------------------------------------------
 function ENT:CustomInitialize_CustomTank()
 	if GetConVar("vj_npc_noidleparticle"):GetInt() == 0 then
@@ -87,25 +85,25 @@ function ENT:CustomInitialize_CustomTank()
 end
 ---------------------------------------------------------------------------------------------------------------------------------------------
 function ENT:StartSpawnEffects()
-	net.Start("vj_mili_tankm1a1_spawneffects")
+	net.Start("vj_mili_tank_m1a1_idle")
 	net.WriteEntity(self)
 	net.Broadcast()
 end
 ---------------------------------------------------------------------------------------------------------------------------------------------
 function ENT:StartMoveEffects()
-	net.Start("vj_mili_tankm1a1_moveeffects")
+	net.Start("vj_mili_tank_m1a1_move")
 	net.WriteEntity(self)
 	net.Broadcast()
 end
 ---------------------------------------------------------------------------------------------------------------------------------------------
 function ENT:GetNearDeathSparkPositions()
-	local randpos = math.random(1,7)
-	if randpos == 1 then return self.Spark1:SetLocalPos(self:GetPos() +self:GetForward()*100 +self:GetUp()*60) else
-	if randpos == 2 then return self.Spark1:SetLocalPos(self:GetPos() +self:GetForward()*30 +self:GetUp()*60) end
-	if randpos == 3 then return self.Spark1:SetLocalPos(self.WhiteLight1:GetPos()) end 
-	if randpos == 4 then return self.Spark1:SetLocalPos(self.WhiteLight2:GetPos()) end
-	if randpos == 5 then return self.Spark1:SetLocalPos(self:GetPos() +self:GetForward()*10 +self:GetUp()*60 +self:GetRight()*50) end
-	if randpos == 6 then return self.Spark1:SetLocalPos(self:GetPos() +self:GetForward()*80 +self:GetUp()*60 +self:GetRight()*-50) end
-	if randpos == 7 then return self.Spark1:SetLocalPos(self:GetPos() +self:GetForward()*-20 +self:GetUp()*60 +self:GetRight()*-30) end
+	local randPos = math.random(1, 7)
+	if randPos == 1 then self.Spark1:SetLocalPos(self:GetPos() +self:GetForward()*100 +self:GetUp()*60) else
+	if randPos == 2 then self.Spark1:SetLocalPos(self:GetPos() +self:GetForward()*30 +self:GetUp()*60) end
+	if randPos == 3 then self.Spark1:SetLocalPos(self.WhiteLight1:GetPos()) end 
+	if randPos == 4 then self.Spark1:SetLocalPos(self.WhiteLight2:GetPos()) end
+	if randPos == 5 then self.Spark1:SetLocalPos(self:GetPos() +self:GetForward()*10 +self:GetUp()*60 +self:GetRight()*50) end
+	if randPos == 6 then self.Spark1:SetLocalPos(self:GetPos() +self:GetForward()*80 +self:GetUp()*60 +self:GetRight()*-50) end
+	if randPos == 7 then self.Spark1:SetLocalPos(self:GetPos() +self:GetForward()*-20 +self:GetUp()*60 +self:GetRight()*-30) end
 	end
 end

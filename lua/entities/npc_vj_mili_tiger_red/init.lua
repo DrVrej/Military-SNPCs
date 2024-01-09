@@ -24,33 +24,31 @@ ENT.Tank_CollisionBoundSize = 140
 ENT.Tank_CollisionBoundUp = 120
 ENT.Tank_DeathSoldierModels = {"models/VJ_WAFFEN/german_soldier1.mdl","models/VJ_WAFFEN/german_soldier2.mdl","models/VJ_WAFFEN/german_soldier3.mdl","models/VJ_WAFFEN/german_soldier4.mdl","models/VJ_WAFFEN/german_soldier5.mdl","models/VJ_WAFFEN/german_soldier6.mdl"}
 
-util.AddNetworkString("vj_mili_redtiger_spawneffects")
-util.AddNetworkString("vj_mili_redtiger_moveeffects")
 ---------------------------------------------------------------------------------------------------------------------------------------------
 function ENT:Tank_GunnerSpawnPosition()
-	return self:GetPos() +self:GetUp()*92 +self:GetRight()*-20
+	return self:GetPos() + self:GetUp()*92 + self:GetRight()*-20
 end
 ---------------------------------------------------------------------------------------------------------------------------------------------
 function ENT:StartSpawnEffects()
-	net.Start("vj_mili_redtiger_spawneffects")
+	net.Start("vj_mili_tank_tiger_idle")
 	net.WriteEntity(self)
 	net.Broadcast()
 end
 ---------------------------------------------------------------------------------------------------------------------------------------------
 function ENT:StartMoveEffects()
-	net.Start("vj_mili_redtiger_moveeffects")
+	net.Start("vj_mili_tank_tiger_move")
 	net.WriteEntity(self)
 	net.Broadcast()
 end
 ---------------------------------------------------------------------------------------------------------------------------------------------
 function ENT:GetNearDeathSparkPositions()
-	local randpos = math.random(1,7)
-	if randpos == 1 then return self.Spark1:SetLocalPos(self:GetPos() +self:GetForward()*90 +self:GetUp()*60 +self:GetRight()*-100) else
-	if randpos == 2 then return self.Spark1:SetLocalPos(self:GetPos() +self:GetForward()*-50 +self:GetUp()*100 +self:GetRight()*40) end
-	if randpos == 3 then return self.Spark1:SetLocalPos(self:GetPos()+self:GetUp()*100 +self:GetRight()*-190 +self:GetForward()*-20) end 
-	if randpos == 4 then return self.Spark1:SetLocalPos(self:GetPos()+self:GetUp()*100 +self:GetRight()*-140) end
-	if randpos == 5 then return self.Spark1:SetLocalPos(self:GetPos() +self:GetForward()*30 +self:GetUp()*70 +self:GetRight()*70) end
-	if randpos == 6 then return self.Spark1:SetLocalPos(self:GetPos() +self:GetForward()*80 +self:GetUp()*90 +self:GetRight()*-30) end
-	if randpos == 7 then return self.Spark1:SetLocalPos(self:GetPos() +self:GetForward()*-100 +self:GetUp()*70 +self:GetRight()*-80) end
+	local randPos = math.random(1, 7)
+	if randPos == 1 then self.Spark1:SetLocalPos(self:GetPos() +self:GetForward()*90 +self:GetUp()*60 +self:GetRight()*-100) else
+	if randPos == 2 then self.Spark1:SetLocalPos(self:GetPos() +self:GetForward()*-50 +self:GetUp()*100 +self:GetRight()*40) end
+	if randPos == 3 then self.Spark1:SetLocalPos(self:GetPos()+self:GetUp()*100 +self:GetRight()*-190 +self:GetForward()*-20) end 
+	if randPos == 4 then self.Spark1:SetLocalPos(self:GetPos()+self:GetUp()*100 +self:GetRight()*-140) end
+	if randPos == 5 then self.Spark1:SetLocalPos(self:GetPos() +self:GetForward()*30 +self:GetUp()*70 +self:GetRight()*70) end
+	if randPos == 6 then self.Spark1:SetLocalPos(self:GetPos() +self:GetForward()*80 +self:GetUp()*90 +self:GetRight()*-30) end
+	if randPos == 7 then self.Spark1:SetLocalPos(self:GetPos() +self:GetForward()*-100 +self:GetUp()*70 +self:GetRight()*-80) end
 	end
 end

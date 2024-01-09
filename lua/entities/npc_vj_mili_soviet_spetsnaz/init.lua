@@ -21,9 +21,11 @@ ENT.CanFlinch = 1 -- 0 = Don't flinch | 1 = Flinch at any damage | 2 = Flinch on
 	-- ====== Sound File Paths ====== --
 -- Leave blank if you don't want any sounds to play
 ENT.SoundTbl_Idle = {"vj_military/russian/idle1.wav","vj_military/russian/idle2.wav","vj_military/russian/idle3.wav","vj_military/russian/idle4.wav","vj_military/russian/idle5.wav","vj_military/russian/idle6.wav","vj_military/russian/idle7.wav","vj_military/russian/idle8.wav","vj_military/russian/idle9.wav","vj_military/russian/idle10.wav","vj_military/russian/idle11.wav","vj_military/russian/idle12.wav"}
+ENT.SoundTbl_MedicBeforeHeal = {"vj_military/russian/medic1.wav","vj_military/russian/medic2.wav","vj_military/russian/medic3.wav","vj_military/russian/medic4.wav","vj_military/russian/medic5.wav","vj_military/russian/medic6.wav","vj_military/russian/medic7.wav","vj_military/russian/medic8.wav","vj_military/russian/medic9.wav",}
 ENT.SoundTbl_Alert = {"vj_military/russian/alert1.wav","vj_military/russian/alert2.wav","vj_military/russian/alert3.wav","vj_military/russian/alert4.wav","vj_military/russian/alert5.wav","vj_military/russian/alert6.wav"}
 ENT.SoundTbl_CombatIdle = {"vj_military/russian/attack1.wav","vj_military/russian/attack2.wav","vj_military/russian/attack3.wav","vj_military/russian/attack4.wav","vj_military/russian/attack5.wav","vj_military/russian/attack6.wav","vj_military/russian/attack7.wav","vj_military/russian/attack8.wav","vj_military/russian/attack9.wav","vj_military/russian/attack10.wav","vj_military/russian/attack11.wav","vj_military/russian/attack12.wav"}
 ENT.SoundTbl_WeaponReload = {"vj_military/russian/reloading1.wav","vj_military/russian/reloading2.wav","vj_military/russian/reloading3.wav","vj_military/russian/reloading4.wav","vj_military/russian/reloading5.wav","vj_military/russian/reloading6.wav"}
+ENT.SoundTbl_GrenadeAttack = {"vj_military/russian/throwgrenade1.wav","vj_military/russian/throwgrenade2.wav","vj_military/russian/throwgrenade3.wav","vj_military/russian/throwgrenade4.wav","vj_military/russian/throwgrenade5.wav","vj_military/russian/throwgrenade6.wav","vj_military/russian/throwgrenade7.wav","vj_military/russian/throwgrenade8.wav","vj_military/russian/throwgrenade9.wav"}
 ENT.SoundTbl_OnGrenadeSight = {"vj_military/russian/grenade1.wav","vj_military/russian/grenade2.wav","vj_military/russian/grenade3.wav","vj_military/russian/grenade4.wav","vj_military/russian/grenade5.wav","vj_military/russian/grenade6.wav"}
 ENT.SoundTbl_Pain = {"vj_military/russian/pain1.wav","vj_military/russian/pain2.wav","vj_military/russian/pain3.wav","vj_military/russian/pain4.wav","vj_military/russian/pain5.wav","vj_military/russian/pain6.wav"}
 ENT.SoundTbl_Death = {"vj_military/russian/die1.wav","vj_military/russian/die2.wav","vj_military/russian/die3.wav","vj_military/russian/die4.wav","vj_military/russian/die5.wav","vj_military/russian/die6.wav"}
@@ -31,9 +33,10 @@ ENT.SoundTbl_Death = {"vj_military/russian/die1.wav","vj_military/russian/die2.w
 ENT.IdleSoundLevel = 85
 ---------------------------------------------------------------------------------------------------------------------------------------------
 function ENT:CustomOnInitialize()
-	if math.random(1,5) == 1 then self.IsMedicSNPC = true end
-	self:SetSkin(math.random(0,2))
-	self:SetBodygroup(1,math.random(0,2))
-	self:SetBodygroup(2,math.random(0,2))
-	if math.random(1,4) == 1 then self:SetBodygroup(2,math.random(3,5)) end
+	if math.random(1, 5) == 1 then self.IsMedicSNPC = true end
+	
+	self:SetSkin(math.random(0, 2))
+	self:SetBodygroup(1, math.random(0, 2))
+	self:SetBodygroup(2, math.random(0, 2))
+	if math.random(1, 4) == 1 then self:SetBodygroup(2, math.random(3, 5)) end
 end

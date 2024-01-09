@@ -18,10 +18,9 @@ ENT.Tank_Shell_DynamicLightPos = Vector(-200, 0, 0)
 ENT.Tank_Shell_MuzzleFlashPos = Vector(0, -250, 12)
 ENT.Tank_Shell_ParticlePos = Vector(0, -260, 18)
 
-util.AddNetworkString("vj_mili_redtigerg_shooteffects")
 ---------------------------------------------------------------------------------------------------------------------------------------------
 function ENT:StartShootEffects()
-	net.Start("vj_mili_redtigerg_shooteffects")
+	net.Start("vj_mili_tank_tiger_fire")
 	net.WriteEntity(self)
 	net.Broadcast()
 end

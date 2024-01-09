@@ -18,7 +18,6 @@ ENT.FootStepTimeWalk = 0.5 -- Next foot step sound when it is walking
 ENT.HasGrenadeAttack = true -- Should the SNPC have a grenade attack?
 	-- ====== Flinching Code ====== --
 ENT.CanFlinch = 1 -- 0 = Don't flinch | 1 = Flinch at any damage | 2 = Flinch only from certain damages
-ENT.AnimTbl_Flinch = {ACT_FLINCH_PHYSICS} -- If it uses normal based animation, use this
 	-- ====== Sound File Paths ====== --
 -- Leave blank if you don't want any sounds to play
 ENT.SoundTbl_Idle = {"vj_military/german/objectiveclear1.wav","vj_military/german/objectiveclear2.wav","vj_military/german/objectiveclear3.wav","vj_military/german/objectiveclear4.wav","vj_military/german/objectiveclear5.wav","vj_military/german/spreadout1.wav","vj_military/german/spreadout2.wav","vj_military/german/sticktogether1.wav","vj_military/german/sticktogether2.wav","vj_military/german/statusreport1.wav","vj_military/german/statusreport2.wav","vj_military/german/raid_decoy1.wav","vj_military/german/raid_decoy2.wav","vj_military/german/raid_decoy3.wav","vj_military/german/raid_decoy4.wav","vj_military/german/raid_decoy5.wav"}
@@ -37,5 +36,5 @@ ENT.SoundTbl_DamageByPlayer = {"vj_military/german/friendlyfire1.wav","vj_milita
 ENT.SoundTbl_Death = {"vj_military/german/death_distant1.wav","vj_military/german/death_distant2.wav","vj_military/german/death_distant3.wav","vj_military/german/death_distant4.wav","vj_military/german/death_distant5.wav","vj_military/german/death_distant6.wav","vj_military/german/death_distant7.wav","vj_military/german/death_distant8.wav","vj_military/german/death_distant9.wav"}
 ---------------------------------------------------------------------------------------------------------------------------------------------
 function ENT:CustomOnInitialize()
-	if math.random(1,5) == 1 then self.IsMedicSNPC = true end
+	if math.random(1, 5) == 1 then self.IsMedicSNPC = true end
 end

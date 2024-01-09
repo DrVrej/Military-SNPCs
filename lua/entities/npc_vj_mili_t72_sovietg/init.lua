@@ -16,10 +16,9 @@ ENT.Tank_Shell_DynamicLightPos = Vector(-200,0,0)
 ENT.Tank_Shell_MuzzleFlashPos = Vector(-300,0,64)
 ENT.Tank_Shell_ParticlePos = Vector(-226,00,65)
 
-util.AddNetworkString("vj_mili_t72g_shooteffects")
 ---------------------------------------------------------------------------------------------------------------------------------------------
 function ENT:StartShootEffects()
-	net.Start("vj_mili_t72g_shooteffects")
+	net.Start("vj_mili_tank_t72_fire")
 	net.WriteEntity(self)
 	net.Broadcast()
 end
