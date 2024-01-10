@@ -36,6 +36,15 @@ function ENT:CustomOnInitialize()
 	self:CapabilitiesAdd(bit.bor(CAP_MOVE_CLIMB))
 end
 ---------------------------------------------------------------------------------------------------------------------------------------------
+function ENT:TranslateActivity(act)
+	if act == ACT_CLIMB_UP or act == ACT_CLIMB_DOWN then
+		return ACT_RUN_AIM_PISTOL
+	elseif act == ACT_CLIMB_DISMOUNT then
+		return ACT_LAND
+	end
+	return self.BaseClass.TranslateActivity(self, act)
+end
+---------------------------------------------------------------------------------------------------------------------------------------------
 function ENT:CustomOnMeleeAttack_AfterChecks(TheHitEntity)
 	self:TakeDamage(self:GetMaxHealth(), self, self)
 end
