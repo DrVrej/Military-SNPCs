@@ -8,7 +8,6 @@ include("shared.lua")
 ENT.Model = {"models/VJ_Terrorist/chicleet.mdl"} -- The game will pick a random model from the table when the SNPC is spawned | Add as many as you want 
 ENT.StartHealth = 200
 ENT.HullType = HULL_MEDIUM_TALL
-ENT.HullSizeNormal = false -- set to false to cancel out the self:SetHullSizeNormal()
 ---------------------------------------------------------------------------------------------------------------------------------------------
 ENT.VJ_NPC_Class = {"CLASS_TERRORIST"} -- NPCs with the same class with be allied to each other
 ENT.BloodColor = "Red" -- The blood type, this will determine what it should use (decal, particle, etc.)
