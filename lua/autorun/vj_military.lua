@@ -21,14 +21,14 @@ if VJExists == true then
 		VJ.AddNPC_HUMAN("U.S. Airborne (Enemy)", "npc_vj_mili_airborne", {"weapon_vj_us_thompson", "weapon_vj_us_m1garand", "weapon_vj_us_m1garand", "weapon_vj_us_m1garand"}, spawnCategory)
 		VJ.AddNPC("M1 Abrams Woodland (Enemy)", "npc_vj_mili_m1a1abrams", spawnCategory)
 		VJ.AddNPC("M1 Abrams Desert (Enemy)", "npc_vj_mili_m1a1abramsdes", spawnCategory)
-		VJ.AddNPC("M2 Browning Emplacement (Enemy)", "npc_vj_emp_m2browning", spawnCategory)
+		VJ.AddNPC("M2 Browning Emplacement (Enemy)", "npc_vj_mili_emp_m2b", spawnCategory)
 		-- Germany
 		VJ.AddNPC_HUMAN("Wehrmacht Infantry (Enemy)", "npc_vj_mili_wehrmacht", {"weapon_vj_mp40", "weapon_vj_nz_karabiner98k", "weapon_vj_nz_karabiner98k", "weapon_vj_nz_karabiner98k"}, spawnCategory)
 		VJ.AddNPC_HUMAN("German Infantry (Enemy)", "npc_vj_mili_german", {"weapon_vj_mp40", "weapon_vj_nz_karabiner98k", "weapon_vj_nz_karabiner98k", "weapon_vj_nz_karabiner98k"}, spawnCategory)
 		VJ.AddNPC_HUMAN("Panzergrenadier (Enemy)", "npc_vj_mili_pzgrenadier", {"weapon_vj_mp40", "weapon_vj_nz_karabiner98k", "weapon_vj_nz_karabiner98k"}, spawnCategory)
 		VJ.AddNPC_HUMAN("Waffen-SS (Enemy)", "npc_vj_mili_waffenss", {"weapon_vj_mp40"}, spawnCategory)
 		VJ.AddNPC("Tiger (Enemy)", "npc_vj_mili_tiger_red", spawnCategory)
-		VJ.AddNPC("MG 42 Emplacement (Enemy)", "npc_vj_emp_mg42", spawnCategory)
+		VJ.AddNPC("MG 42 Emplacement (Enemy)", "npc_vj_mili_emp_mg42", spawnCategory)
 		-- Soviet
 		VJ.AddNPC_HUMAN("Soviet Infantry (Enemy)", "npc_vj_mili_soviet", {"weapon_vj_sov_mosinnagant", "weapon_vj_sov_mosinnagant", "weapon_vj_sov_mosinnagant", "weapon_vj_sov_ppsh41"}, spawnCategory)
 		VJ.AddNPC_HUMAN("Soviet Spetsnaz (Enemy)", "npc_vj_mili_soviet_spetsnaz", {"weapon_vj_ak47", "weapon_vj_sov_ppsh41"}, spawnCategory)
@@ -46,14 +46,14 @@ if VJExists == true then
 		VJ.AddNPC_HUMAN("U.S. Airborne (Friendly)", "npc_vj_milifri_airborne", {"weapon_vj_us_thompson", "weapon_vj_us_m1garand", "weapon_vj_us_m1garand", "weapon_vj_us_m1garand"}, spawnCategory)
 		VJ.AddNPC("M1 Abrams Woodland (Friendly)", "npc_vj_milifri_m1a1abrams", spawnCategory)
 		VJ.AddNPC("M1 Abrams Desert (Friendly)", "npc_vj_milifri_m1a1abramsdes", spawnCategory)
-		VJ.AddNPC("M2 Browning Emplacement (Friendly)", "npc_vj_empfri_m2browning", spawnCategory)
+		VJ.AddNPC("M2 Browning Emplacement (Friendly)", "npc_vj_milifri_emp_m2b", spawnCategory)
 		-- Germany
 		VJ.AddNPC_HUMAN("Wehrmacht Infantry (Friendly)", "npc_vj_milifri_wehrmacht", {"weapon_vj_mp40", "weapon_vj_nz_karabiner98k", "weapon_vj_nz_karabiner98k", "weapon_vj_nz_karabiner98k"}, spawnCategory)
 		VJ.AddNPC_HUMAN("German Infantry (Friendly)", "npc_vj_milifri_german", {"weapon_vj_mp40", "weapon_vj_nz_karabiner98k", "weapon_vj_nz_karabiner98k", "weapon_vj_nz_karabiner98k"}, spawnCategory)
 		VJ.AddNPC_HUMAN("Panzergrenadier (Friendly)", "npc_vj_milifri_pzgrenadier", {"weapon_vj_mp40", "weapon_vj_nz_karabiner98k", "weapon_vj_nz_karabiner98k"}, spawnCategory)
 		VJ.AddNPC_HUMAN("Waffen-SS (Friendly)", "npc_vj_milifri_waffenss", {"weapon_vj_mp40", "weapon_vj_nz_karabiner98k"}, spawnCategory)
 		VJ.AddNPC("Tiger (Friendly)", "npc_vj_milifri_tiger_red", spawnCategory)
-		VJ.AddNPC("MG 42 Emplacement (Friendly)", "npc_vj_empfri_mg42", spawnCategory)
+		VJ.AddNPC("MG 42 Emplacement (Friendly)", "npc_vj_milifri_emp_mg42", spawnCategory)
 		-- Soviet
 		VJ.AddNPC_HUMAN("Soviet Infantry (Friendly)", "npc_vj_milifri_soviet", {"weapon_vj_sov_mosinnagant", "weapon_vj_sov_mosinnagant", "weapon_vj_sov_mosinnagant", "weapon_vj_sov_ppsh41"}, spawnCategory)
 		VJ.AddNPC_HUMAN("Soviet Spetsnaz (Friendly)", "npc_vj_milifri_soviet_spetsnaz", {"weapon_vj_ak47", "weapon_vj_sov_ppsh41"}, spawnCategory)

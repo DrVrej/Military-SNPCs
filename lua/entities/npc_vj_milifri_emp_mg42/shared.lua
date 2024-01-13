@@ -1,6 +1,6 @@
-ENT.Base 			= "npc_vj_emp_m2browning"
+ENT.Base 			= "npc_vj_mili_emp_mg42"
 ENT.Type 			= "ai"
-ENT.PrintName 		= "Friendly M2 Browning Emplacement"
+ENT.PrintName 		= "Friendly MG 42 Emplacement"
 ENT.Author 			= "DrVrej"
 ENT.Contact 		= "http://steamcommunity.com/groups/vrejgaming"
 ENT.Purpose 		= "Spawn it and fight with it!"

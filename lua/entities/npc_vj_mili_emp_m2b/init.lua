@@ -122,8 +122,7 @@ function ENT:CustomOnThink_AIEnabled()
 end
 ---------------------------------------------------------------------------------------------------------------------------------------------
 function ENT:CustomAttackCheck_RangeAttack()
-	if self.Emp_CurrentAmmo > 0 then return true end
-	return false
+	return self.Emp_CurrentAmmo > 0
 end
 ---------------------------------------------------------------------------------------------------------------------------------------------
 //local angX90 = Angle(90, 0, 0)
@@ -137,6 +136,7 @@ function ENT:CustomRangeAttackCode()
 	local aimPos = self:GetAimPosition(ene, spawnPos, 0)
 	local spread = self:CalcAimSpread(ene, aimPos, 1)
 	local bullet = {}
+		bullet.Attacker = self
 		bullet.Src = spawnPos
 		bullet.Dir = (aimPos - spawnPos):GetNormal()
 		bullet.Spread = Vector(spread, spread, 0)
