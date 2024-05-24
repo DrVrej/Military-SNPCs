@@ -13,9 +13,9 @@ ENT.VJ_NPC_Class = {"CLASS_TERRORIST"} -- NPCs with the same class with be allie
 ENT.BloodColor = "Red" -- The blood type, this will determine what it should use (decal, particle, etc.)
 ENT.HasMeleeAttack = true -- Should the SNPC have a melee attack?
 ENT.MeleeAttackDamage = 30
-ENT.AnimTbl_MeleeAttack = {ACT_MELEE_ATTACK1} -- Melee Attack Animations
-ENT.MeleeAttackDistance = 80 -- How close does it have to be until it attacks?
-ENT.MeleeAttackDamageDistance = 120 -- How far does the damage go?
+ENT.AnimTbl_MeleeAttack = ACT_MELEE_ATTACK1 -- Melee Attack Animations
+ENT.MeleeAttackDistance = 80 -- How close an enemy has to be to trigger a melee attack | false = Let the base auto calculate on initialize based on the NPC's collision bounds
+ENT.MeleeAttackDamageDistance = 120 -- How far does the damage go | false = Let the base auto calculate on initialize based on the NPC's collision bounds
 ENT.TimeUntilMeleeAttackDamage = 0.6 -- This counted in seconds | This calculates the time until it hits something
 ENT.NextAnyAttackTime_Melee = 0.4 -- How much time until it can use any attack again? | Counted in Seconds
 ENT.DisableDefaultMeleeAttackDamageCode = false -- Disables the default melee attack damage code
@@ -48,7 +48,7 @@ function ENT:CustomOnMeleeAttack_AfterChecks(TheHitEntity)
 	self:TakeDamage(self:GetMaxHealth(), self, self)
 end
 ---------------------------------------------------------------------------------------------------------------------------------------------
-local colorRed = VJ_Color2Byte(Color(130, 19, 10))
+local colorRed = VJ.Color2Byte(Color(130, 19, 10))
 --
 function ENT:SetUpGibesOnDeath(dmginfo,hitgroup)
 	util.BlastDamage(self, self, self:GetPos(), 300, 150)
