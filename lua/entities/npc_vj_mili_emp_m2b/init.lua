@@ -25,7 +25,7 @@ ENT.DisableRangeAttackAnimation = true -- if true, it will disable the animation
 
 //ENT.SoundTbl_RangeAttack = {"vj_weapons/m2browning/m2_tp.wav"}
 
-ENT.RangeAttackPitch = VJ_Set(100, 100)
+ENT.RangeAttackPitch = VJ.SET(100, 100)
 ENT.RangeAttackSoundLevel = 80
 
 -- Custom
@@ -77,7 +77,7 @@ function ENT:CustomOnThink_AIEnabled()
 		if self.Emp_CurrentAmmo <= 0 && self.Emp_Reloading == false then
 			self.Emp_Reloading = true
 			gunModel:SetBodygroup(2, 1)
-			VJ_EmitSound(self, "vj_weapons/m2browning/m2_reload.wav")
+			VJ.EmitSound(self, "vj_weapons/m2browning/m2_reload.wav")
 			gunModel:ResetSequence(gunModel:LookupSequence("reload"))
 			gunModel:ResetSequenceInfo()
 			gunModel:SetCycle(0)
@@ -179,8 +179,8 @@ function ENT:CustomRangeAttackCode()
 		end*/
 	self.GunModel:FireBullets(bullet)
 	
-	self:PlaySoundSystem("RangeAttack", "vj_weapons/m2browning/m2_tp.wav", VJ_EmitSound)
-	VJ_EmitSound(self, "vj_weapons/m2browning/m2_dist.wav", 110)
+	self:PlaySoundSystem("RangeAttack", "vj_weapons/m2browning/m2_tp.wav", VJ.EmitSound)
+	VJ.EmitSound(self, "vj_weapons/m2browning/m2_dist.wav", 110)
 	
 	//ParticleEffectAttach("vj_rifle_full", PATTACH_POINT, self.GunModel, 1)
 	ParticleEffectAttach("vj_military_muzzle_bar", PATTACH_POINT, self.GunModel, 1)
