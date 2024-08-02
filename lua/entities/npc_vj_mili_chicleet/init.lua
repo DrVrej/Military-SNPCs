@@ -5,13 +5,13 @@ include("shared.lua")
 	No parts of this code or any of its contents may be reproduced, copied, modified or adapted,
 	without the prior written consent of the author, unless otherwise indicated for stand-alone materials.
 -----------------------------------------------*/
-ENT.Model = {"models/VJ_Terrorist/chicleet.mdl"} -- The game will pick a random model from the table when the SNPC is spawned | Add as many as you want 
+ENT.Model = {"models/VJ_Terrorist/chicleet.mdl"} -- Model(s) to spawn with | Picks a random one if it's a table 
 ENT.StartHealth = 200
 ENT.HullType = HULL_MEDIUM_TALL
 ---------------------------------------------------------------------------------------------------------------------------------------------
 ENT.VJ_NPC_Class = {"CLASS_TERRORIST"} -- NPCs with the same class with be allied to each other
 ENT.BloodColor = "Red" -- The blood type, this will determine what it should use (decal, particle, etc.)
-ENT.HasMeleeAttack = true -- Should the SNPC have a melee attack?
+ENT.HasMeleeAttack = true -- Can this NPC melee attack?
 ENT.MeleeAttackDamage = 30
 ENT.AnimTbl_MeleeAttack = ACT_MELEE_ATTACK1 -- Melee Attack Animations
 ENT.MeleeAttackDistance = 80 -- How close an enemy has to be to trigger a melee attack | false = Let the base auto calculate on initialize based on the NPC's collision bounds
@@ -19,7 +19,7 @@ ENT.MeleeAttackDamageDistance = 120 -- How far does the damage go | false = Let 
 ENT.TimeUntilMeleeAttackDamage = 0.6 -- This counted in seconds | This calculates the time until it hits something
 ENT.NextAnyAttackTime_Melee = 0.4 -- How much time until it can use any attack again? | Counted in Seconds
 ENT.DisableDefaultMeleeAttackDamageCode = false -- Disables the default melee attack damage code
-ENT.HasDeathRagdoll = false -- If set to false, it will not spawn the regular ragdoll of the SNPC
+ENT.HasDeathRagdoll = false -- Should the NPC spawn a corpse when it dies?
 ENT.GibOnDeathDamagesTable = {"All"} -- Damages that it gibs from | "UseDefault" = Uses default damage types | "All" = Gib from any damage
 	-- ====== Sound File Paths ====== --
 -- Leave blank if you don't want any sounds to play
