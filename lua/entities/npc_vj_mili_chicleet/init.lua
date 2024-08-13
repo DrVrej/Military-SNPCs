@@ -50,7 +50,7 @@ end
 ---------------------------------------------------------------------------------------------------------------------------------------------
 local colorRed = VJ.Color2Byte(Color(130, 19, 10))
 --
-function ENT:SetUpGibesOnDeath(dmginfo,hitgroup)
+function ENT:SetUpGibesOnDeath(dmginfo, hitgroup)
 	util.BlastDamage(self, self, self:GetPos(), 300, 150)
 	util.ScreenShake(self:GetPos(), 100, 200, 1, 2500)
 

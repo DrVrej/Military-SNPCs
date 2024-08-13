@@ -8,7 +8,7 @@ SWEP.Category = "Military"
 	-- NPC Settings ---------------------------------------------------------------------------------------------------------------------------------------------
 SWEP.NPC_NextPrimaryFire = 1.35 -- RPM of the weapon in seconds | Calculation: 60 / RPM
 SWEP.NPC_CustomSpread = 0.5 -- This is added on top of the custom spread that's set inside the SNPC! | Starting from 1: Closer to 0 = better accuracy, Farther than 1 = worse accuracy
-SWEP.NPC_ReloadSound = "vj_weapons/reload_boltaction.wav" -- Sounds it plays when the base detects the SNPC playing a reload animation
+SWEP.NPC_ReloadSound = "vj_base/weapons/reload_rifle_bolt.wav" -- Sounds it plays when the base detects the SNPC playing a reload animation
 	-- Main Settings ---------------------------------------------------------------------------------------------------------------------------------------------
 SWEP.MadeForNPCsOnly = true -- Is tihs weapon meant to be for NPCs only?
 SWEP.WorldModel = "models/vj_weapons/american/w_m1_garand.mdl"
