@@ -18,8 +18,7 @@ ENT.FootStepTimeWalk = 0.5 -- Next foot step sound when it is walking
 ENT.HasGrenadeAttack = true -- Should the SNPC have a grenade attack?
 	-- ====== Flinching Code ====== --
 ENT.CanFlinch = 1 -- 0 = Don't flinch | 1 = Flinch at any damage | 2 = Flinch only from certain damages
-	-- ====== Sound File Paths ====== --
--- Leave blank if you don't want any sounds to play
+	-- ====== Sound Paths ====== --
 ENT.SoundTbl_Idle = {"vj_military/arabic/idle1.wav","vj_military/arabic/idle2.wav","vj_military/arabic/idle3.wav","vj_military/arabic/idle4.wav","vj_military/arabic/idle5.wav","vj_military/arabic/idle6.wav","vj_military/arabic/idle7.wav","vj_military/arabic/idle8.wav","vj_military/arabic/idle9.wav","vj_military/arabic/idle10.wav","vj_military/arabic/idle11.wav","vj_military/arabic/idle12.wav"}
 ENT.SoundTbl_Alert = {"vj_military/arabic/alert1.wav","vj_military/arabic/alert1.wav","vj_military/arabic/attack1.wav","vj_military/arabic/attack2.wav","vj_military/arabic/attack3.wav","vj_military/arabic/attack4.wav","vj_military/arabic/attack7.wav"}
 ENT.SoundTbl_CombatIdle = {"vj_military/arabic/attack1.wav","vj_military/arabic/attack2.wav","vj_military/arabic/attack3.wav","vj_military/arabic/attack4.wav","vj_military/arabic/attack5.wav","vj_military/arabic/attack6.wav","vj_military/arabic/attack7.wav","vj_military/arabic/allahackbar1.wav","vj_military/arabic/allahackbar2.wav","vj_military/arabic/allahackbar3.wav","vj_military/arabic/allahackbar1.wav","vj_military/arabic/allahackbar2.wav","vj_military/arabic/allahackbar3.wav"}
