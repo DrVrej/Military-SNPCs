@@ -16,7 +16,7 @@ ENT.VJ_NPC_Class = {"CLASS_GERMAN"}
 ENT.HasMeleeAttack = false -- Can this NPC melee attack?
 
 ENT.HasRangeAttack = true -- Can this NPC range attack?
-ENT.RangeDistance = 5000 -- This is how far away it can shoot
+ENT.RangeDistance = 5000 -- How far can it range attack?
 ENT.RangeToMeleeDistance = 1 -- How close does it have to be until it uses melee?
 ENT.TimeUntilRangeAttackProjectileRelease = 0 -- How much time until the projectile code is ran?
 ENT.NextRangeAttackTime = 0.06 -- How much time until it can use a range attack?
@@ -37,7 +37,7 @@ ENT.Emp_Lerp_Yaw = 0
 ENT.Emp_Lerp_Ptich = 0
 ENT.Emp_Lerp_Ptich_Previous = 0
 ---------------------------------------------------------------------------------------------------------------------------------------------
-function ENT:CustomOnInitialize()
+function ENT:Init()
 	self:SetCollisionBounds(Vector(20, 20, 60), Vector(-20, -20, 0))
 	
 	local gunModel = ents.Create("prop_vj_animatable")
@@ -56,7 +56,7 @@ function ENT:CustomOnInitialize()
 	self.Emp_CurrentAmmo = self.Emp_MaxAmmo
 end
 ---------------------------------------------------------------------------------------------------------------------------------------------
-function ENT:CustomOnThink_AIEnabled()
+function ENT:OnThinkActive()
 	if IsValid(self.GunModel) then
 		local ene = self:GetEnemy()
 		local gunModel = self.GunModel

@@ -21,7 +21,7 @@ SWEP.WorldModel_CustomPositionOrigin = Vector(9, 0.5, -3.9)
 	-- Primary Fire ---------------------------------------------------------------------------------------------------------------------------------------------
 SWEP.Primary.Damage = 20 -- Damage
 SWEP.Primary.Force = 1 -- Force applied on the object the bullet hits
-SWEP.Primary.ClipSize = 5 -- Max amount of bullets per clip
+SWEP.Primary.ClipSize = 5 -- Max amount of rounds per clip
 SWEP.Primary.Ammo = "357" -- Ammo type
 SWEP.Primary.Sound = "vj_weapons/karabiner_98k/kar98_close1.wav"
 SWEP.Primary.DistantSound = "vj_weapons/karabiner_98k/kar98_distant1.wav"

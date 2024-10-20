@@ -21,7 +21,7 @@ SWEP.WorldModel_CustomPositionOrigin = Vector(15, 0.4, -5.4)
 	-- Primary Fire ---------------------------------------------------------------------------------------------------------------------------------------------
 SWEP.Primary.Damage = 20 -- Damage
 SWEP.Primary.Force = 1 -- Force applied on the object the bullet hits
-SWEP.Primary.ClipSize = 5 -- Max amount of bullets per clip
+SWEP.Primary.ClipSize = 5 -- Max amount of rounds per clip
 SWEP.Primary.Ammo = "357" -- Ammo type
 SWEP.Primary.Sound = {"vj_weapons/mosin_nagant/fire2a.wav", "vj_weapons/mosin_nagant/fire2b.wav", "vj_weapons/mosin_nagant/fire2c.wav"}
 SWEP.Primary.HasDistantSound = true -- Does it have a distant sound when the gun is shot?

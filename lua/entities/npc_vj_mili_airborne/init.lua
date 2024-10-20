@@ -34,12 +34,12 @@ ENT.SoundTbl_Pain = {"vj_military/english_american/pain1.wav","vj_military/engli
 ENT.SoundTbl_DamageByPlayer = {"vj_military/english_american/friendlyfire1.wav","vj_military/english_american/friendlyfire2.wav","vj_military/english_american/friendlyfire3.wav","vj_military/english_american/friendlyfire4.wav","vj_military/english_american/friendlyfire5.wav","vj_military/english_american/friendlyfire6.wav"}
 ENT.SoundTbl_Death = {"vj_military/english_american/death1.wav","vj_military/english_american/death2.wav","vj_military/english_american/death3.wav","vj_military/english_american/death4.wav","vj_military/english_american/death5.wav","vj_military/english_american/death6.wav"}
 ---------------------------------------------------------------------------------------------------------------------------------------------
-function ENT:CustomOnInitialize()
+function ENT:Init()
 	self:SetBodygroup(1, math.random(0, 2))
 	if math.random(1, 5) == 1 then self.IsMedicSNPC = true end
 end
 ---------------------------------------------------------------------------------------------------------------------------------------------
-function ENT:CustomOnDeath_AfterCorpseSpawned(dmginfo, hitgroup, corpseEnt)
+function ENT:OnCreateDeathCorpse(dmginfo, hitgroup, corpseEnt)
 	if dmginfo:GetDamageType() == DMG_BLAST or hitgroup == HITGROUP_HEAD then
 		corpseEnt:SetBodygroup(2, 1)
 		self:CreateExtraDeathCorpse("prop_physics", "models/VJ_UNITEDSTATES/helmet.mdl", {Pos = corpseEnt:GetAttachment(corpseEnt:LookupAttachment("anim_attachment_head")).Pos})

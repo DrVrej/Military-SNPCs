@@ -25,6 +25,6 @@ ENT.EntitiesToSpawn = {
 	{SpawnPosition = Vector(-50, -50, 0), Entities = {"npc_vj_mili_terrorist"}, WeaponsList = {"default"}},
 }
 ---------------------------------------------------------------------------------------------------------------------------------------------
-function ENT:CustomOnInitialize_BeforeNPCSpawn()
+function ENT:Init()
 	self:EmitSound("vj_military/arabic/terrorism"..math.random(1, 7)..".wav", 511, math.random(90, 100))
 end

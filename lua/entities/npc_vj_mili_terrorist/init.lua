@@ -26,6 +26,6 @@ ENT.SoundTbl_OnGrenadeSight = {"vj_military/arabic/scared1.wav","vj_military/ara
 ENT.SoundTbl_Pain = {"vj_military/arabic/pain1.wav","vj_military/arabic/pain2.wav","vj_military/arabic/pain3.wav","vj_military/arabic/pain4.wav","vj_military/arabic/pain5.wav","vj_military/arabic/pain6.wav"}
 ENT.SoundTbl_Death = {"vj_military/arabic/death1.wav","vj_military/arabic/death2.wav","vj_military/arabic/death3.wav","vj_military/arabic/death4.wav","vj_military/arabic/death5.wav","vj_military/arabic/death6.wav","vj_military/arabic/death7.wav"}
 ---------------------------------------------------------------------------------------------------------------------------------------------
-function ENT:CustomOnInitialize()
+function ENT:Init()
 	if math.random(1, 5) == 1 then self.IsMedicSNPC = true end
 end
