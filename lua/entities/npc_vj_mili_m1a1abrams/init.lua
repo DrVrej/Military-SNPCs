@@ -23,7 +23,7 @@ ENT.Tank_CollisionBoundUp = 100
 ENT.Tank_DeathSoldierModels = {"models/VJ_HGRUNT/hgrunt1.mdl","models/VJ_HGRUNT/hgrunt2.mdl","models/VJ_HGRUNT/hgrunt3.mdl","models/VJ_HGRUNT/hgrunt4.mdl","models/VJ_HGRUNT/hgrunt5.mdl"}
 
 ---------------------------------------------------------------------------------------------------------------------------------------------
-function ENT:CustomInitialize_CustomTank()
+function ENT:Tank_Init()
 	if GetConVar("vj_npc_noidleparticle"):GetInt() == 0 then
 		self.WhiteLight1 = ents.Create("env_sprite")
 		self.WhiteLight1:SetPos( self:GetPos() +self:GetForward()*-150 +self:GetRight()*33 +self:GetUp()*50 )

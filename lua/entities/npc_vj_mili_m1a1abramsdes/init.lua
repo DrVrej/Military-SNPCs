@@ -23,7 +23,7 @@ ENT.Tank_CollisionBoundUp = 100
 ENT.Tank_DeathSoldierModels = {"models/VJ_UNITEDSTATES/ranger1.mdl"}
 
 ---------------------------------------------------------------------------------------------------------------------------------------------
-function ENT:CustomInitialize_CustomTank()
+function ENT:Tank_Init()
 	self:SetSkin(1)
 	if GetConVar("vj_npc_noidleparticle"):GetInt() == 0 then
 		self.WhiteLight1 = ents.Create("env_sprite")
