@@ -34,7 +34,7 @@ if VJExists == true then
 		VJ.AddNPC_HUMAN("Soviet Spetsnaz (Enemy)", "npc_vj_mili_soviet_spetsnaz", {"weapon_vj_ak47", "weapon_vj_sov_ppsh41"}, spawnCategory)
 		VJ.AddNPC("Soviet T-72 (Enemy)", "npc_vj_mili_t72_soviet", spawnCategory)
 		-- Insurgents
-		VJ.AddNPC_HUMAN("Terrorist (Enemy)", "npc_vj_mili_terrorist", {"weapon_vj_rpg", "weapon_vj_rpg", "weapon_vj_ak47", "weapon_vj_ak47", "weapon_vj_ak47", "weapon_vj_m16a1", "weapon_vj_m16a1", "weapon_vj_m16a1", "weapon_vj_mp40", "weapon_vj_mp40", "weapon_vj_mp40", "weapon_vj_smg1", "weapon_vj_smg1", "weapon_vj_smg1", "weapon_vj_spas12", "weapon_vj_spas12", "weapon_vj_spas12"}, spawnCategory)
+		VJ.AddNPC_HUMAN("Terrorist (Enemy)", "npc_vj_mili_terrorist", {"weapon_vj_rpg", "weapon_vj_rpg", "weapon_vj_ak47", "weapon_vj_ak47", "weapon_vj_ak47", "weapon_vj_mp40", "weapon_vj_mp40", "weapon_vj_mp40", "weapon_vj_smg1", "weapon_vj_smg1", "weapon_vj_smg1", "weapon_vj_spas12", "weapon_vj_spas12", "weapon_vj_spas12"}, spawnCategory)
 		VJ.AddNPC("ChicLeet (Enemy)", "npc_vj_mili_chicleet", spawnCategory)
 		VJ.AddNPC("Terrorist T-72 (Enemy)", "npc_vj_mili_t72_terrorist", spawnCategory)
 		VJ.AddNPC("Terrorism (Enemy)", "sent_vj_mili_terrorism", spawnCategory)
@@ -59,7 +59,7 @@ if VJExists == true then
 		VJ.AddNPC_HUMAN("Soviet Spetsnaz (Friendly)", "npc_vj_milifri_soviet_spetsnaz", {"weapon_vj_ak47", "weapon_vj_sov_ppsh41"}, spawnCategory)
 		VJ.AddNPC("Soviet T-72 (Friendly)", "npc_vj_milifri_t72_soviet", spawnCategory)
 		-- Insurgents
-		VJ.AddNPC_HUMAN("Terrorist (Friendly)", "npc_vj_milifri_terrorist", {"weapon_vj_rpg", "weapon_vj_rpg", "weapon_vj_ak47", "weapon_vj_ak47", "weapon_vj_ak47", "weapon_vj_m16a1", "weapon_vj_m16a1", "weapon_vj_m16a1", "weapon_vj_mp40", "weapon_vj_mp40", "weapon_vj_mp40", "weapon_vj_smg1", "weapon_vj_smg1", "weapon_vj_smg1", "weapon_vj_spas12", "weapon_vj_spas12", "weapon_vj_spas12"}, spawnCategory)
+		VJ.AddNPC_HUMAN("Terrorist (Friendly)", "npc_vj_milifri_terrorist", {"weapon_vj_rpg", "weapon_vj_rpg", "weapon_vj_ak47", "weapon_vj_ak47", "weapon_vj_ak47", "weapon_vj_mp40", "weapon_vj_mp40", "weapon_vj_mp40", "weapon_vj_smg1", "weapon_vj_smg1", "weapon_vj_smg1", "weapon_vj_spas12", "weapon_vj_spas12", "weapon_vj_spas12"}, spawnCategory)
 		VJ.AddNPC("ChicLeet (Friendly)", "npc_vj_milifri_chicleet", spawnCategory)
 		VJ.AddNPC("Terrorist T-72 (Friendly)", "npc_vj_milifri_t72_terrorist", spawnCategory)
 		VJ.AddNPC("Terrorism (Friendly)", "sent_vj_milifri_terrorism", spawnCategory)
