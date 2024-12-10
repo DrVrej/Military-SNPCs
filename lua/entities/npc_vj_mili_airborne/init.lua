@@ -36,7 +36,7 @@ ENT.SoundTbl_Death = {"vj_military/english_american/death1.wav","vj_military/eng
 ---------------------------------------------------------------------------------------------------------------------------------------------
 function ENT:Init()
 	self:SetBodygroup(1, math.random(0, 2))
-	if math.random(1, 5) == 1 then self.IsMedicSNPC = true end
+	if math.random(1, 5) == 1 then self.IsMedic = true end
 end
 ---------------------------------------------------------------------------------------------------------------------------------------------
 function ENT:OnCreateDeathCorpse(dmginfo, hitgroup, corpseEnt)

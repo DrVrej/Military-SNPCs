@@ -35,7 +35,7 @@ ENT.SoundTbl_DamageByPlayer = {"vj_military/english_american/friendlyfire1.wav",
 ENT.SoundTbl_Death = {"vj_military/english_american/death1.wav","vj_military/english_american/death2.wav","vj_military/english_american/death3.wav","vj_military/english_american/death4.wav","vj_military/english_american/death5.wav","vj_military/english_american/death6.wav"}
 ---------------------------------------------------------------------------------------------------------------------------------------------
 function ENT:Init()
-	if math.random(1, 5) == 1 then self.IsMedicSNPC = true end
+	if math.random(1, 5) == 1 then self.IsMedic = true end
 	
 	self:SetBodygroup(1, math.random(0, 4))
 	self:SetBodygroup(2, math.random(0, 1))
