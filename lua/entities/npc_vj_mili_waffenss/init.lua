@@ -16,7 +16,6 @@ ENT.MeleeAttackDamage = 20
 ENT.FootStepTimeRun = 0.4 -- Next foot step sound when it is running
 ENT.FootStepTimeWalk = 0.5 -- Next foot step sound when it is walking
 ENT.HasGrenadeAttack = true -- Should the SNPC have a grenade attack?
-ENT.DeathCorpseEntityClass = "prop_ragdoll" -- The entity class it creates | "UseDefaultBehavior" = Let the base automatically detect the type
 	-- ====== Flinching Code ====== --
 ENT.CanFlinch = 1 -- 0 = Don't flinch | 1 = Flinch at any damage | 2 = Flinch only from certain damages
 	-- ====== Sound Paths ====== --
