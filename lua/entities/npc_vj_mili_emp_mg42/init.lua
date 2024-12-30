@@ -134,7 +134,7 @@ function ENT:CustomRangeAttackCode()
 	local ene = self:GetEnemy()
 	local spawnPos = self:GetPos() + self:GetUp() * 50 + self:GetForward() * 10 -- Do NOT use the gun's attachments because parenting breaks attachment positions!
 	local aimPos = self:GetAimPosition(ene, spawnPos, 0)
-	local spread = self:CalcAimSpread(ene, aimPos, 1)
+	local spread = self:GetAimSpread(ene, aimPos, 1)
 	local bullet = {}
 		bullet.Attacker = self
 		bullet.Src = spawnPos
