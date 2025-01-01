@@ -20,7 +20,7 @@ ENT.TimeUntilMeleeAttackDamage = 0.6 -- This counted in seconds | This calculate
 ENT.NextAnyAttackTime_Melee = 0.4 -- How much time until it can use any attack again? | Counted in Seconds
 ENT.DisableDefaultMeleeAttackDamageCode = false -- Disables the default melee attack damage code
 ENT.HasDeathCorpse = false -- Should a corpse spawn when it's killed?
-ENT.GibOnDeathDamagesTable = {"All"} -- Damages that it gibs from | "UseDefault" = Uses default damage types | "All" = Gib from any damage
+ENT.GibOnDeathFilter = false
 	-- ====== Sound Paths ====== --
 ENT.SoundTbl_Idle = {"vj_military/chicleet/idle1.wav","vj_military/chicleet/idle2.wav","vj_military/chicleet/idle3.wav","vj_military/chicleet/idle4.wav","vj_military/chicleet/idle5.wav"}
 ENT.SoundTbl_Alert = {"vj_military/chicleet/alert1.wav","vj_military/chicleet/alert2.wav"}
@@ -49,11 +49,12 @@ end
 ---------------------------------------------------------------------------------------------------------------------------------------------
 local colorRed = VJ.Color2Byte(Color(130, 19, 10))
 --
-function ENT:SetUpGibesOnDeath(dmginfo, hitgroup)
-	util.BlastDamage(self, self, self:GetPos(), 300, 150)
-	util.ScreenShake(self:GetPos(), 100, 200, 1, 2500)
+function ENT:HandleGibOnDeath(dmginfo, hitgroup)
+	local myPos = self:GetPos()
+	util.BlastDamage(self, self, myPos, 300, 150)
+	util.ScreenShake(myPos, 100, 200, 1, 2500)
 
-	local spawnPos = self:GetPos() + self:OBBCenter()
+	local spawnPos = myPos + self:OBBCenter()
 	
 	if self.HasGibOnDeathEffects == true then
 		local effectData = EffectData()
@@ -91,4 +92,5 @@ function ENT:SetUpGibesOnDeath(dmginfo, hitgroup)
 	self:CreateGibEntity("obj_vj_gib", "UseHuman_Big", {Pos=spawnPos + VectorRand(-25, 25)})
 	self:CreateGibEntity("obj_vj_gib", "UseHuman_Big", {Pos=spawnPos + VectorRand(-25, 25)})
 	self:CreateGibEntity("obj_vj_gib", "UseHuman_Big", {Pos=spawnPos + VectorRand(-25, 25)})
+	return true
 end

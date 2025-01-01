@@ -16,7 +16,6 @@ ENT.MeleeAttackDamage = 10
 ENT.FootStepTimeRun = 0.4 -- Delay between footstep sounds while it is running | false = Disable while running
 ENT.FootStepTimeWalk = 0.5 -- Delay between footstep sounds while it is walking | false = Disable while walking
 ENT.HasGrenadeAttack = true -- Should the SNPC have a grenade attack?
-ENT.DamageByPlayerDispositionLevel = 1 -- 0 = Run it every time | 1 = Run it only when friendly to player | 2 = Run it only when enemy to player
 	-- ====== Flinching Code ====== --
 ENT.CanFlinch = 1 -- 0 = Don't flinch | 1 = Flinch at any damage | 2 = Flinch only from certain damages
 	-- ====== Sound Paths ====== --
