@@ -24,7 +24,7 @@ ENT.Tank_DeathSoldierModels = {"models/VJ_HGRUNT/hgrunt1.mdl","models/VJ_HGRUNT/
 
 ---------------------------------------------------------------------------------------------------------------------------------------------
 function ENT:Tank_Init()
-	if GetConVar("vj_npc_noidleparticle"):GetInt() == 0 then
+	if GetConVar("vj_npc_reduce_vfx"):GetInt() == 0 then
 		self.WhiteLight1 = ents.Create("env_sprite")
 		self.WhiteLight1:SetPos( self:GetPos() +self:GetForward()*-150 +self:GetRight()*33 +self:GetUp()*50 )
 		self.WhiteLight1:SetKeyValue( "renderfx", "14" )
