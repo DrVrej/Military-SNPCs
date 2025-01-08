@@ -13,8 +13,6 @@ ENT.VJ_NPC_Class = {"CLASS_UNITED_STATES"} -- NPCs with the same class with be a
 ENT.BloodColor = VJ.BLOOD_COLOR_RED -- The blood type, this will determine what it should use (decal, particle, etc.)
 ENT.HasMeleeAttack = true -- Can this NPC melee attack?
 ENT.MeleeAttackDamage = 15
-ENT.FootStepTimeRun = 0.4 -- Delay between footstep sounds while it is running | false = Disable while running
-ENT.FootStepTimeWalk = 0.5 -- Delay between footstep sounds while it is walking | false = Disable while walking
 ENT.HasGrenadeAttack = true -- Should the SNPC have a grenade attack?
 	-- ====== Flinching Code ====== --
 ENT.CanFlinch = 1 -- 0 = Don't flinch | 1 = Flinch at any damage | 2 = Flinch only from certain damages
