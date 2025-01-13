@@ -16,6 +16,7 @@ ENT.SoundTbl_CombatIdle = {"vj_military/arabic/attack1.wav","vj_military/arabic/
 
 -- Tank Base
 ENT.Tank_GunnerENT = "npc_vj_mili_t72_terroristg"
+ENT.Tank_AngleOffset = 180
 ENT.Tank_CollisionBoundSize = 90
 ENT.Tank_CollisionBoundUp = 100
 ENT.Tank_DeathSoldierModels = {"models/VJ_Terrorist/2hemagh.mdl","models/VJ_Terrorist/2kimasked.mdl","models/VJ_Terrorist/3hemagh.mdl","models/VJ_Terrorist/shemagh.mdl","models/VJ_Terrorist/shemagh_helmet.mdl","models/VJ_Terrorist/skimasked.mdl","models/VJ_Terrorist/unmasked1.mdl","models/VJ_Terrorist/unmasked2.mdl"}

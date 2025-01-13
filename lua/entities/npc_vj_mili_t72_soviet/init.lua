@@ -16,6 +16,7 @@ ENT.SoundTbl_CombatIdle = {"vj_military/russian/attack1.wav","vj_military/russia
 
 -- Custom
 ENT.Tank_GunnerENT = "npc_vj_mili_t72_sovietg"
+ENT.Tank_AngleOffset = 180
 ENT.Tank_CollisionBoundSize = 90
 ENT.Tank_CollisionBoundUp = 100
 ENT.Tank_DeathSoldierModels = {"models/soviet/soviet_soldier1.mdl","models/soviet/soviet_soldier2.mdl","models/soviet/soviet_soldier3.mdl","models/soviet/soviet_soldier4.mdl","models/soviet/soviet_soldier5.mdl","models/soviet/soviet_soldier6.mdl"}

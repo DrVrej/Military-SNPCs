@@ -11,14 +11,7 @@ ENT.StartHealth = 0
 ENT.VJ_NPC_Class = {"CLASS_RUSSIAN"} -- NPCs with the same class with be allied to each other
 
 -- Tank Base
+ENT.Tank_AngleOffset = 180
 ENT.Tank_Shell_SpawnPos = Vector(-170,0,65)
-ENT.Tank_Shell_DynamicLightPos = Vector(-200,0,0)
 ENT.Tank_Shell_MuzzleFlashPos = Vector(-300,0,64)
 ENT.Tank_Shell_ParticlePos = Vector(-226,00,65)
-
----------------------------------------------------------------------------------------------------------------------------------------------
-function ENT:StartShootEffects()
-	net.Start("vj_mili_tank_t72_fire")
-	net.WriteEntity(self)
-	net.Broadcast()
-end
