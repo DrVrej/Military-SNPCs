@@ -21,7 +21,7 @@ ENT.Tank_GunnerENT = "npc_vj_mili_m1a1abramsdesg"
 ENT.Tank_AngleOffset = 180
 ENT.Tank_CollisionBoundSize = 90
 ENT.Tank_CollisionBoundUp = 100
-ENT.Tank_DeathSoldierModels = {"models/VJ_UNITEDSTATES/ranger1.mdl"}
+ENT.Tank_DeathDriverCorpse = {"models/VJ_UNITEDSTATES/ranger1.mdl"}
 
 ---------------------------------------------------------------------------------------------------------------------------------------------
 function ENT:Tank_Init()
