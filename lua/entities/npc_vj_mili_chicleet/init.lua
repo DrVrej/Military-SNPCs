@@ -5,7 +5,7 @@ include("shared.lua")
 	No parts of this code or any of its contents may be reproduced, copied, modified or adapted,
 	without the prior written consent of the author, unless otherwise indicated for stand-alone materials.
 -----------------------------------------------*/
-ENT.Model = {"models/VJ_Terrorist/chicleet.mdl"} -- Model(s) to spawn with | Picks a random one if it's a table 
+ENT.Model = "models/VJ_Terrorist/chicleet.mdl" -- Model(s) to spawn with | Picks a random one if it's a table 
 ENT.StartHealth = 200
 ENT.HullType = HULL_MEDIUM_TALL
 ---------------------------------------------------------------------------------------------------------------------------------------------
@@ -31,7 +31,7 @@ ENT.SoundTbl_Death = {"vj_military/chicleet/death1.wav"}
 ---------------------------------------------------------------------------------------------------------------------------------------------
 function ENT:Init()
 	self:SetCollisionBounds(Vector(13, 13, 90), Vector(-13, -13, 0))
-	self:CapabilitiesAdd(bit.bor(CAP_MOVE_CLIMB))
+	self:CapabilitiesAdd(CAP_MOVE_CLIMB)
 end
 ---------------------------------------------------------------------------------------------------------------------------------------------
 function ENT:TranslateActivity(act)
@@ -56,7 +56,7 @@ function ENT:HandleGibOnDeath(dmginfo, hitgroup)
 
 	local spawnPos = myPos + self:OBBCenter()
 	
-	if self.HasGibOnDeathEffects == true then
+	if self.HasGibOnDeathEffects then
 		local effectData = EffectData()
 		effectData:SetOrigin(spawnPos)
 		util.Effect("Explosion", effectData)
