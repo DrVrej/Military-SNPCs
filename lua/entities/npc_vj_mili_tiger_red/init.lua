@@ -29,16 +29,24 @@ function ENT:Tank_GunnerSpawnPosition()
 	return self:GetPos() + self:GetUp()*92 + self:GetRight()*-20
 end
 ---------------------------------------------------------------------------------------------------------------------------------------------
-function ENT:StartSpawnEffects()
-	net.Start("vj_mili_tank_tiger_idle")
-	net.WriteEntity(self)
-	net.Broadcast()
+function ENT:UpdateIdleParticles()
+	local effectData = EffectData()
+	effectData:SetScale(1)
+	effectData:SetEntity(self)
+	effectData:SetOrigin(self:GetPos() + self:GetForward() * 20 + self:GetRight() * -195 + self:GetUp() * 100)
+	util.Effect("VJ_VehicleExhaust", effectData, true, true)
+	effectData:SetOrigin(self:GetPos() + self:GetForward() * -20 + self:GetRight() * -195 + self:GetUp() * 100)
+	util.Effect("VJ_VehicleExhaust", effectData, true, true)
 end
 ---------------------------------------------------------------------------------------------------------------------------------------------
-function ENT:StartMoveEffects()
-	net.Start("vj_mili_tank_tiger_move")
-	net.WriteEntity(self)
-	net.Broadcast()
+function ENT:UpdateMoveParticles()
+	local effectData = EffectData()
+	effectData:SetScale(1)
+	effectData:SetEntity(self)
+	effectData:SetOrigin(self:GetPos() + self:GetForward() * 65 + self:GetRight() * -130)
+	util.Effect("VJ_VehicleMove", effectData, true, true)
+	effectData:SetOrigin(self:GetPos() + self:GetForward() * -65 + self:GetRight() * -13)
+	util.Effect("VJ_VehicleMove", effectData, true, true)
 end
 ---------------------------------------------------------------------------------------------------------------------------------------------
 function ENT:GetNearDeathSparkPositions()

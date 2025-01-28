@@ -85,16 +85,24 @@ function ENT:Tank_Init()
 	end
 end
 ---------------------------------------------------------------------------------------------------------------------------------------------
-function ENT:StartSpawnEffects()
-	net.Start("vj_mili_tank_m1a1_idle")
-	net.WriteEntity(self)
-	net.Broadcast()
+function ENT:UpdateIdleParticles()
+	local effectData = EffectData()
+	effectData:SetScale(1)
+	effectData:SetEntity(self)
+	effectData:SetOrigin(self:GetPos() + self:GetForward() * 160 + self:GetRight() * -28 + self:GetUp() * 45)
+	util.Effect("VJ_VehicleExhaust", effectData, true, true)
+	effectData:SetOrigin(self:GetPos() + self:GetForward() * 160 + self:GetRight() * 28 + self:GetUp() * 45)
+	util.Effect("VJ_VehicleExhaust", effectData, true, true)
 end
 ---------------------------------------------------------------------------------------------------------------------------------------------
-function ENT:StartMoveEffects()
-	net.Start("vj_mili_tank_m1a1_move")
-	net.WriteEntity(self)
-	net.Broadcast()
+function ENT:UpdateMoveParticles()
+	local effectData = EffectData()
+	effectData:SetScale(1)
+	effectData:SetEntity(self)
+	effectData:SetOrigin(self:GetPos() + self:GetForward() * 87 + self:GetRight() * 58)
+	util.Effect("VJ_VehicleMove", effectData, true, true)
+	effectData:SetOrigin(self:GetPos() + self:GetForward() * 87 + self:GetRight() * -58)
+	util.Effect("VJ_VehicleMove", effectData, true, true)
 end
 ---------------------------------------------------------------------------------------------------------------------------------------------
 function ENT:GetNearDeathSparkPositions()
