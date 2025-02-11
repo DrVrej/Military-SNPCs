@@ -8,7 +8,7 @@ include("shared.lua")
 ENT.Model = {"models/VJ_GERMAN/tigerturret.mdl"} -- Model(s) to spawn with | Picks a random one if it's a table 
 ENT.StartHealth = 0
 ---------------------------------------------------------------------------------------------------------------------------------------------
-ENT.VJ_NPC_Class = {"CLASS_GERMAN"} -- NPCs with the same class with be allied to each other
+ENT.VJ_NPC_Class = {"CLASS_GERMAN"}
 
 -- Tank Base
 ENT.Tank_AngleOffset = -90

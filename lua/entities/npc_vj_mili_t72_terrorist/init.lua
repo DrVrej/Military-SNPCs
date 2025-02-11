@@ -8,7 +8,7 @@ include("shared.lua")
 ENT.Model = {"models/vehicles/t72_chasis.mdl"} -- Model(s) to spawn with | Picks a random one if it's a table 
 ENT.StartHealth = 500
 ---------------------------------------------------------------------------------------------------------------------------------------------
-ENT.VJ_NPC_Class = {"CLASS_TERRORIST"} -- NPCs with the same class with be allied to each other
+ENT.VJ_NPC_Class = {"CLASS_TERRORIST"}
 
 ENT.SoundTbl_Idle = {"vj_military/arabic/idle1.wav","vj_military/arabic/idle2.wav","vj_military/arabic/idle3.wav","vj_military/arabic/idle4.wav","vj_military/arabic/idle5.wav","vj_military/arabic/idle6.wav","vj_military/arabic/idle7.wav","vj_military/arabic/idle8.wav","vj_military/arabic/idle9.wav","vj_military/arabic/idle10.wav","vj_military/arabic/idle11.wav","vj_military/arabic/idle12.wav"}
 ENT.SoundTbl_Alert = {"vj_military/arabic/alert1.wav","vj_military/arabic/alert1.wav","vj_military/arabic/attack1.wav","vj_military/arabic/attack2.wav","vj_military/arabic/attack3.wav","vj_military/arabic/attack4.wav","vj_military/arabic/attack7.wav"}

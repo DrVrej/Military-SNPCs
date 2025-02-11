@@ -8,7 +8,7 @@ include("shared.lua")
 ENT.Model = {"models/vehicles/t72_turret.mdl"} -- Model(s) to spawn with | Picks a random one if it's a table 
 ENT.StartHealth = 0
 ---------------------------------------------------------------------------------------------------------------------------------------------
-ENT.VJ_NPC_Class = {"CLASS_TERRORIST"} -- NPCs with the same class with be allied to each other
+ENT.VJ_NPC_Class = {"CLASS_TERRORIST"}
 
 -- Tank Base
 ENT.Tank_AngleOffset = 180

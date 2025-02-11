@@ -9,7 +9,7 @@ ENT.Model = "models/VJ_Terrorist/chicleet.mdl" -- Model(s) to spawn with | Picks
 ENT.StartHealth = 200
 ENT.HullType = HULL_MEDIUM_TALL
 ---------------------------------------------------------------------------------------------------------------------------------------------
-ENT.VJ_NPC_Class = {"CLASS_TERRORIST"} -- NPCs with the same class with be allied to each other
+ENT.VJ_NPC_Class = {"CLASS_TERRORIST"}
 ENT.BloodColor = VJ.BLOOD_COLOR_RED
 ENT.HasMeleeAttack = true -- Can this NPC melee attack?
 ENT.MeleeAttackDamage = 30

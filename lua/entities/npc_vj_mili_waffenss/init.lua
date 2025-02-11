@@ -9,7 +9,7 @@ ENT.Model = {"models/VJ_SS/soldier_1.mdl","models/VJ_SS/soldier_2.mdl","models/V
 ENT.StartHealth = 90
 ENT.HullType = HULL_HUMAN
 ---------------------------------------------------------------------------------------------------------------------------------------------
-ENT.VJ_NPC_Class = {"CLASS_GERMAN"} -- NPCs with the same class with be allied to each other
+ENT.VJ_NPC_Class = {"CLASS_GERMAN"}
 ENT.BloodColor = VJ.BLOOD_COLOR_RED
 ENT.HasMeleeAttack = true -- Can this NPC melee attack?
 ENT.MeleeAttackDamage = 20

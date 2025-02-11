@@ -9,7 +9,7 @@ ENT.Model = {"models/VJ_WIC_SOVIET/soviet_01.mdl","models/VJ_WIC_SOVIET/soviet_0
 ENT.StartHealth = 80
 ENT.HullType = HULL_HUMAN
 ---------------------------------------------------------------------------------------------------------------------------------------------
-ENT.VJ_NPC_Class = {"CLASS_RUSSIAN"} -- NPCs with the same class with be allied to each other
+ENT.VJ_NPC_Class = {"CLASS_RUSSIAN"}
 ENT.BloodColor = VJ.BLOOD_COLOR_RED
 ENT.HasMeleeAttack = true -- Can this NPC melee attack?
 ENT.MeleeAttackDamage = 15

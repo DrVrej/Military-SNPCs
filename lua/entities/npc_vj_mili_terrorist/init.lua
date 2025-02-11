@@ -9,7 +9,7 @@ ENT.Model = {"models/VJ_Terrorist/2hemagh.mdl","models/VJ_Terrorist/2kimasked.md
 ENT.StartHealth = 60
 ENT.HullType = HULL_HUMAN
 ---------------------------------------------------------------------------------------------------------------------------------------------
-ENT.VJ_NPC_Class = {"CLASS_TERRORIST"} -- NPCs with the same class with be allied to each other
+ENT.VJ_NPC_Class = {"CLASS_TERRORIST"}
 ENT.BloodColor = VJ.BLOOD_COLOR_RED
 ENT.HasMeleeAttack = true -- Can this NPC melee attack?
 ENT.MeleeAttackDamage = 10
