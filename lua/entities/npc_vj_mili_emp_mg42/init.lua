@@ -5,23 +5,23 @@ include("shared.lua")
 	No parts of this code or any of its contents may be reproduced, copied, modified or adapted,
 	without the prior written consent of the author, unless otherwise indicated for stand-alone materials.
 -----------------------------------------------*/
-ENT.Model = {"models/gredwitch/mg81z/mg81z_tripod.mdl"} -- Model(s) to spawn with | Picks a random one if it's a table
+ENT.Model = "models/gredwitch/mg81z/mg81z_tripod.mdl"
 ENT.StartHealth = 200
 ENT.HullType = HULL_HUMAN
-ENT.SightDistance = 5000 -- How far it can see
-ENT.MovementType = VJ_MOVETYPE_STATIONARY -- How the NPC moves around
-ENT.CanTurnWhileStationary = false -- If set to true, the SNPC will be able to turn while it's a stationary SNPC
+ENT.SightDistance = 5000
+ENT.MovementType = VJ_MOVETYPE_STATIONARY
+ENT.CanTurnWhileStationary = false
 ---------------------------------------------------------------------------------------------------------------------------------------------
 ENT.VJ_NPC_Class = {"CLASS_GERMAN"}
-ENT.HasMeleeAttack = false -- Can this NPC melee attack?
+ENT.HasMeleeAttack = false
 
-ENT.HasRangeAttack = true -- Can this NPC range attack?
-ENT.RangeDistance = 5000 -- How far can it range attack?
-ENT.RangeToMeleeDistance = 1 -- How close does it have to be until it uses melee?
-ENT.TimeUntilRangeAttackProjectileRelease = 0 -- How much time until the projectile code is ran?
-ENT.NextRangeAttackTime = 0.06 -- How much time until it can use a range attack?
-ENT.DisableDefaultRangeAttackCode = true -- When true, it won't spawn the range attack entity, allowing you to make your own
-ENT.DisableRangeAttackAnimation = true -- if true, it will disable the animation code
+ENT.HasRangeAttack = true
+ENT.RangeDistance = 5000
+ENT.RangeToMeleeDistance = 1
+ENT.TimeUntilRangeAttackProjectileRelease = 0
+ENT.NextRangeAttackTime = 0.06
+ENT.DisableDefaultRangeAttackCode = true
+ENT.DisableRangeAttackAnimation = true
 
 //ENT.SoundTbl_RangeAttack = {"vj_weapons/m2browning/m2_tp.wav"}
 

@@ -5,23 +5,23 @@ include("shared.lua")
 	No parts of this code or any of its contents may be reproduced, copied, modified or adapted,
 	without the prior written consent of the author, unless otherwise indicated for stand-alone materials.
 -----------------------------------------------*/
-ENT.Model = "models/VJ_Terrorist/chicleet.mdl" -- Model(s) to spawn with | Picks a random one if it's a table 
+ENT.Model = "models/VJ_Terrorist/chicleet.mdl"
 ENT.StartHealth = 200
 ENT.HullType = HULL_MEDIUM_TALL
 ---------------------------------------------------------------------------------------------------------------------------------------------
 ENT.VJ_NPC_Class = {"CLASS_TERRORIST"}
 ENT.BloodColor = VJ.BLOOD_COLOR_RED
-ENT.HasMeleeAttack = true -- Can this NPC melee attack?
+ENT.HasMeleeAttack = true
 ENT.MeleeAttackDamage = 30
 ENT.AnimTbl_MeleeAttack = ACT_MELEE_ATTACK1
-ENT.MeleeAttackDistance = 80 -- How close an enemy has to be to trigger a melee attack | false = Let the base auto calculate on initialize based on the NPC's collision bounds
-ENT.MeleeAttackDamageDistance = 120 -- How far does the damage go | false = Let the base auto calculate on initialize based on the NPC's collision bounds
-ENT.TimeUntilMeleeAttackDamage = 0.6 -- This counted in seconds | This calculates the time until it hits something
-ENT.NextAnyAttackTime_Melee = 0.4 -- How much time until it can use any attack again? | Counted in Seconds
-ENT.DisableDefaultMeleeAttackDamageCode = false -- Disables the default melee attack damage code
-ENT.HasDeathCorpse = false -- Should a corpse spawn when it's killed?
+ENT.MeleeAttackDistance = 80
+ENT.MeleeAttackDamageDistance = 120
+ENT.TimeUntilMeleeAttackDamage = 0.6
+ENT.NextAnyAttackTime_Melee = 0.4
+ENT.DisableDefaultMeleeAttackDamageCode = false
+ENT.HasDeathCorpse = false
 ENT.GibOnDeathFilter = false
-	-- ====== Sound Paths ====== --
+
 ENT.SoundTbl_Idle = {"vj_military/chicleet/idle1.wav","vj_military/chicleet/idle2.wav","vj_military/chicleet/idle3.wav","vj_military/chicleet/idle4.wav","vj_military/chicleet/idle5.wav"}
 ENT.SoundTbl_Alert = {"vj_military/chicleet/alert1.wav","vj_military/chicleet/alert2.wav"}
 ENT.SoundTbl_MeleeAttack = {"vj_military/chicleet/attack1.wav","vj_military/chicleet/attack2.wav"}

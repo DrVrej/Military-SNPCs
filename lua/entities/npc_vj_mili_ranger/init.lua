@@ -5,18 +5,18 @@ include("shared.lua")
 	No parts of this code or any of its contents may be reproduced, copied, modified or adapted,
 	without the prior written consent of the author, unless otherwise indicated for stand-alone materials.
 -----------------------------------------------*/
-ENT.Model = {"models/VJ_UNITEDSTATES/ranger1.mdl"} -- Model(s) to spawn with | Picks a random one if it's a table 
+ENT.Model = "models/VJ_UNITEDSTATES/ranger1.mdl"
 ENT.StartHealth = 80
 ENT.HullType = HULL_HUMAN
 ---------------------------------------------------------------------------------------------------------------------------------------------
 ENT.VJ_NPC_Class = {"CLASS_UNITED_STATES"}
 ENT.BloodColor = VJ.BLOOD_COLOR_RED
-ENT.HasMeleeAttack = true -- Can this NPC melee attack?
+ENT.HasMeleeAttack = true
 ENT.MeleeAttackDamage = 15
 ENT.HasGrenadeAttack = true -- Should the SNPC have a grenade attack?
-	-- ====== Flinching Code ====== --
-ENT.CanFlinch = 1 -- 0 = Don't flinch | 1 = Flinch at any damage | 2 = Flinch only from certain damages
-	-- ====== Sound Paths ====== --
+
+ENT.CanFlinch = 1
+
 ENT.SoundTbl_Idle = {"vj_military/english_american/idle1.wav","vj_military/english_american/idle2.wav","vj_military/english_american/idle3.wav","vj_military/english_american/idle4.wav","vj_military/english_american/idle5.wav","vj_military/english_american/idle6.wav","vj_military/english_american/idle7.wav","vj_military/english_american/idle8.wav","vj_military/english_american/idle9.wav","vj_military/english_american/idle10.wav","vj_military/english_american/idle11.wav","vj_military/english_american/idle12.wav"}
 ENT.SoundTbl_OnReceiveOrder = {"vj_military/english_american/yes1.wav","vj_military/english_american/yes2.wav","vj_military/english_american/yes3.wav","vj_military/english_american/yes4.wav","vj_military/english_american/yes5.wav","vj_military/english_american/yes6.wav","vj_military/english_american/yes7.wav","vj_military/english_american/yes8.wav"}
 ENT.SoundTbl_MedicBeforeHeal = {"vj_military/english_american/medic1.wav","vj_military/english_american/medic2.wav","vj_military/english_american/medic3.wav","vj_military/english_american/medic4.wav","vj_military/english_american/medic5.wav","vj_military/english_american/medic6.wav","vj_military/english_american/medic7.wav"}

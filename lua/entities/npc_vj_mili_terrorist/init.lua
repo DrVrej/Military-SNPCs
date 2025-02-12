@@ -5,18 +5,18 @@ include("shared.lua")
 	No parts of this code or any of its contents may be reproduced, copied, modified or adapted,
 	without the prior written consent of the author, unless otherwise indicated for stand-alone materials.
 -----------------------------------------------*/
-ENT.Model = {"models/VJ_Terrorist/2hemagh.mdl","models/VJ_Terrorist/2kimasked.mdl","models/VJ_Terrorist/3hemagh.mdl","models/VJ_Terrorist/shemagh.mdl","models/VJ_Terrorist/shemagh_helmet.mdl","models/VJ_Terrorist/skimasked.mdl","models/VJ_Terrorist/unmasked1.mdl","models/VJ_Terrorist/unmasked2.mdl"} -- Model(s) to spawn with | Picks a random one if it's a table 
+ENT.Model = {"models/VJ_Terrorist/2hemagh.mdl","models/VJ_Terrorist/2kimasked.mdl","models/VJ_Terrorist/3hemagh.mdl","models/VJ_Terrorist/shemagh.mdl","models/VJ_Terrorist/shemagh_helmet.mdl","models/VJ_Terrorist/skimasked.mdl","models/VJ_Terrorist/unmasked1.mdl","models/VJ_Terrorist/unmasked2.mdl"}
 ENT.StartHealth = 60
 ENT.HullType = HULL_HUMAN
 ---------------------------------------------------------------------------------------------------------------------------------------------
 ENT.VJ_NPC_Class = {"CLASS_TERRORIST"}
 ENT.BloodColor = VJ.BLOOD_COLOR_RED
-ENT.HasMeleeAttack = true -- Can this NPC melee attack?
+ENT.HasMeleeAttack = true
 ENT.MeleeAttackDamage = 10
 ENT.HasGrenadeAttack = true -- Should the SNPC have a grenade attack?
-	-- ====== Flinching Code ====== --
-ENT.CanFlinch = 1 -- 0 = Don't flinch | 1 = Flinch at any damage | 2 = Flinch only from certain damages
-	-- ====== Sound Paths ====== --
+
+ENT.CanFlinch = 1
+
 ENT.SoundTbl_Idle = {"vj_military/arabic/idle1.wav","vj_military/arabic/idle2.wav","vj_military/arabic/idle3.wav","vj_military/arabic/idle4.wav","vj_military/arabic/idle5.wav","vj_military/arabic/idle6.wav","vj_military/arabic/idle7.wav","vj_military/arabic/idle8.wav","vj_military/arabic/idle9.wav","vj_military/arabic/idle10.wav","vj_military/arabic/idle11.wav","vj_military/arabic/idle12.wav"}
 ENT.SoundTbl_Alert = {"vj_military/arabic/alert1.wav","vj_military/arabic/alert1.wav","vj_military/arabic/attack1.wav","vj_military/arabic/attack2.wav","vj_military/arabic/attack3.wav","vj_military/arabic/attack4.wav","vj_military/arabic/attack7.wav"}
 ENT.SoundTbl_CombatIdle = {"vj_military/arabic/attack1.wav","vj_military/arabic/attack2.wav","vj_military/arabic/attack3.wav","vj_military/arabic/attack4.wav","vj_military/arabic/attack5.wav","vj_military/arabic/attack6.wav","vj_military/arabic/attack7.wav","vj_military/arabic/allahackbar1.wav","vj_military/arabic/allahackbar2.wav","vj_military/arabic/allahackbar3.wav","vj_military/arabic/allahackbar1.wav","vj_military/arabic/allahackbar2.wav","vj_military/arabic/allahackbar3.wav"}

@@ -5,7 +5,7 @@ include("shared.lua")
 	No parts of this code or any of its contents may be reproduced, copied, modified or adapted,
 	without the prior written consent of the author, unless otherwise indicated for stand-alone materials.
 -----------------------------------------------*/
-ENT.Model = {"models/vehicles/t72_chasis.mdl"} -- Model(s) to spawn with | Picks a random one if it's a table 
+ENT.Model = "models/vehicles/t72_chasis.mdl"
 ENT.StartHealth = 500
 ---------------------------------------------------------------------------------------------------------------------------------------------
 ENT.VJ_NPC_Class = {"CLASS_RUSSIAN"}

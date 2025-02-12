@@ -16,7 +16,7 @@ ENT.Category		= "VJ Base Spawners"
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 if !SERVER then return end
 
-ENT.SingleSpawner = true -- If set to true, it will spawn the entities once then remove itself
+ENT.SingleSpawner = true
 ENT.EntitiesToSpawn = {
 	{SpawnPosition = Vector(0, 0, 0), Entities = {"npc_vj_milifri_chicleet"}},
 	{SpawnPosition = Vector(50, 50, 0), Entities = {"npc_vj_milifri_terrorist"}, WeaponsList = {"default"}},

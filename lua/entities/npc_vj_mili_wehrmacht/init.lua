@@ -5,18 +5,18 @@ include("shared.lua")
 	No parts of this code or any of its contents may be reproduced, copied, modified or adapted,
 	without the prior written consent of the author, unless otherwise indicated for stand-alone materials.
 -----------------------------------------------*/
-ENT.Model = {"models/VJ_WAFFEN/german_soldier1.mdl","models/VJ_WAFFEN/german_soldier2.mdl","models/VJ_WAFFEN/german_soldier3.mdl","models/VJ_WAFFEN/german_soldier4.mdl","models/VJ_WAFFEN/german_soldier5.mdl","models/VJ_WAFFEN/german_soldier6.mdl"} -- Model(s) to spawn with | Picks a random one if it's a table 
+ENT.Model = {"models/VJ_WAFFEN/german_soldier1.mdl","models/VJ_WAFFEN/german_soldier2.mdl","models/VJ_WAFFEN/german_soldier3.mdl","models/VJ_WAFFEN/german_soldier4.mdl","models/VJ_WAFFEN/german_soldier5.mdl","models/VJ_WAFFEN/german_soldier6.mdl"}
 ENT.StartHealth = 60
 ENT.HullType = HULL_HUMAN
 ---------------------------------------------------------------------------------------------------------------------------------------------
 ENT.VJ_NPC_Class = {"CLASS_GERMAN"}
 ENT.BloodColor = VJ.BLOOD_COLOR_RED
-ENT.HasMeleeAttack = true -- Can this NPC melee attack?
+ENT.HasMeleeAttack = true
 ENT.MeleeAttackDamage = 10
 ENT.HasGrenadeAttack = true -- Should the SNPC have a grenade attack?
-	-- ====== Flinching Code ====== --
-ENT.CanFlinch = 1 -- 0 = Don't flinch | 1 = Flinch at any damage | 2 = Flinch only from certain damages
-	-- ====== Sound Paths ====== --
+
+ENT.CanFlinch = 1
+
 ENT.SoundTbl_Idle = {"vj_military/german/objectiveclear1.wav","vj_military/german/objectiveclear2.wav","vj_military/german/objectiveclear3.wav","vj_military/german/objectiveclear4.wav","vj_military/german/objectiveclear5.wav","vj_military/german/spreadout1.wav","vj_military/german/spreadout2.wav","vj_military/german/sticktogether1.wav","vj_military/german/sticktogether2.wav","vj_military/german/statusreport1.wav","vj_military/german/statusreport2.wav","vj_military/german/raid_decoy1.wav","vj_military/german/raid_decoy2.wav","vj_military/german/raid_decoy3.wav","vj_military/german/raid_decoy4.wav","vj_military/german/raid_decoy5.wav"}
 ENT.SoundTbl_CombatIdle = {"vj_military/german/ontheway1.wav","vj_military/german/ontheway2.wav","vj_military/german/ontheway3.wav","vj_military/german/ontheway4.wav","vj_military/german/go1.wav","vj_military/german/go2.wav","vj_military/german/go3.wav","vj_military/german/go4.wav","vj_military/german/moving1.wav","vj_military/german/moving2.wav","vj_military/german/moving3.wav","vj_military/german/moving4.wav","vj_military/german/moving5.wav"}
 ENT.SoundTbl_OnReceiveOrder = {"vj_military/german/affirmative1.wav","vj_military/german/affirmative2.wav","vj_military/german/affirmative3.wav","vj_military/german/affirmative4.wav"}

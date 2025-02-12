@@ -5,18 +5,18 @@ include("shared.lua")
 	No parts of this code or any of its contents may be reproduced, copied, modified or adapted,
 	without the prior written consent of the author, unless otherwise indicated for stand-alone materials.
 -----------------------------------------------*/
-ENT.Model = {"models/soviet/soviet_soldier1.mdl","models/soviet/soviet_soldier2.mdl","models/soviet/soviet_soldier3.mdl","models/soviet/soviet_soldier4.mdl","models/soviet/soviet_soldier5.mdl","models/soviet/soviet_soldier6.mdl"} -- Model(s) to spawn with | Picks a random one if it's a table 
+ENT.Model = {"models/soviet/soviet_soldier1.mdl","models/soviet/soviet_soldier2.mdl","models/soviet/soviet_soldier3.mdl","models/soviet/soviet_soldier4.mdl","models/soviet/soviet_soldier5.mdl","models/soviet/soviet_soldier6.mdl"}
 ENT.StartHealth = 60
 ENT.HullType = HULL_HUMAN
 ---------------------------------------------------------------------------------------------------------------------------------------------
 ENT.VJ_NPC_Class = {"CLASS_RUSSIAN"}
 ENT.BloodColor = VJ.BLOOD_COLOR_RED
-ENT.HasMeleeAttack = true -- Can this NPC melee attack?
+ENT.HasMeleeAttack = true
 ENT.MeleeAttackDamage = 10
 ENT.HasGrenadeAttack = true -- Should the SNPC have a grenade attack?
-	-- ====== Flinching Code ====== --
-ENT.CanFlinch = 1 -- 0 = Don't flinch | 1 = Flinch at any damage | 2 = Flinch only from certain damages
-	-- ====== Sound Paths ====== --
+
+ENT.CanFlinch = 1
+
 ENT.SoundTbl_Idle = {"vj_military/russian/idle1.wav","vj_military/russian/idle2.wav","vj_military/russian/idle3.wav","vj_military/russian/idle4.wav","vj_military/russian/idle5.wav","vj_military/russian/idle6.wav","vj_military/russian/idle7.wav","vj_military/russian/idle8.wav","vj_military/russian/idle9.wav","vj_military/russian/idle10.wav","vj_military/russian/idle11.wav","vj_military/russian/idle12.wav"}
 ENT.SoundTbl_MedicBeforeHeal = {"vj_military/russian/medic1.wav","vj_military/russian/medic2.wav","vj_military/russian/medic3.wav","vj_military/russian/medic4.wav","vj_military/russian/medic5.wav","vj_military/russian/medic6.wav","vj_military/russian/medic7.wav","vj_military/russian/medic8.wav","vj_military/russian/medic9.wav",}
 ENT.SoundTbl_Alert = {"vj_military/russian/alert1.wav","vj_military/russian/alert2.wav","vj_military/russian/alert3.wav","vj_military/russian/alert4.wav","vj_military/russian/alert5.wav","vj_military/russian/alert6.wav"}
