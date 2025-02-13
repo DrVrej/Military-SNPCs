@@ -15,7 +15,7 @@ ENT.HasMeleeAttack = true
 ENT.MeleeAttackDamage = 10
 ENT.HasGrenadeAttack = true -- Should the SNPC have a grenade attack?
 
-ENT.CanFlinch = 1
+ENT.CanFlinch = true
 
 ENT.SoundTbl_Idle = {"vj_military/arabic/idle1.wav","vj_military/arabic/idle2.wav","vj_military/arabic/idle3.wav","vj_military/arabic/idle4.wav","vj_military/arabic/idle5.wav","vj_military/arabic/idle6.wav","vj_military/arabic/idle7.wav","vj_military/arabic/idle8.wav","vj_military/arabic/idle9.wav","vj_military/arabic/idle10.wav","vj_military/arabic/idle11.wav","vj_military/arabic/idle12.wav"}
 ENT.SoundTbl_Alert = {"vj_military/arabic/alert1.wav","vj_military/arabic/alert1.wav","vj_military/arabic/attack1.wav","vj_military/arabic/attack2.wav","vj_military/arabic/attack3.wav","vj_military/arabic/attack4.wav","vj_military/arabic/attack7.wav"}

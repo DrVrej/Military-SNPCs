@@ -8,4 +8,4 @@ include("shared.lua")
 -----------------------------------------------*/
 ---------------------------------------------------------------------------------------------------------------------------------------------
 ENT.VJ_NPC_Class = {"CLASS_UNITED_STATES_FRIENDLY", "CLASS_PLAYER_ALLY"}
-ENT.FriendsWithAllPlayerAllies = true
+ENT.AlliedWithPlayerAllies = true

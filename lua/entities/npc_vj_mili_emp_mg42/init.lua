@@ -21,7 +21,7 @@ ENT.RangeToMeleeDistance = 1
 ENT.TimeUntilRangeAttackProjectileRelease = 0
 ENT.NextRangeAttackTime = 0.06
 ENT.DisableDefaultRangeAttackCode = true
-ENT.DisableRangeAttackAnimation = true
+ENT.AnimTbl_RangeAttack = false
 
 //ENT.SoundTbl_RangeAttack = {"vj_weapons/m2browning/m2_tp.wav"}
 

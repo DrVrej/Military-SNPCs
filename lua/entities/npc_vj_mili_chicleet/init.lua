@@ -18,7 +18,6 @@ ENT.MeleeAttackDistance = 80
 ENT.MeleeAttackDamageDistance = 120
 ENT.TimeUntilMeleeAttackDamage = 0.6
 ENT.NextAnyAttackTime_Melee = 0.4
-ENT.DisableDefaultMeleeAttackDamageCode = false
 ENT.HasDeathCorpse = false
 ENT.GibOnDeathFilter = false
 
@@ -27,7 +26,7 @@ ENT.SoundTbl_Alert = {"vj_military/chicleet/alert1.wav","vj_military/chicleet/al
 ENT.SoundTbl_MeleeAttack = {"vj_military/chicleet/attack1.wav","vj_military/chicleet/attack2.wav"}
 ENT.SoundTbl_MeleeAttackMiss = {"npc/zombie/claw_miss1.wav","npc/zombie/claw_miss2.wav"}
 ENT.SoundTbl_Pain = {"vj_military/chicleet/pain1.wav","vj_military/chicleet/pain2.wav","vj_military/chicleet/pain3.wav"}
-ENT.SoundTbl_Death = {"vj_military/chicleet/death1.wav"}
+ENT.SoundTbl_Death = "vj_military/chicleet/death1.wav"
 ---------------------------------------------------------------------------------------------------------------------------------------------
 function ENT:Init()
 	self:SetCollisionBounds(Vector(13, 13, 90), Vector(-13, -13, 0))
