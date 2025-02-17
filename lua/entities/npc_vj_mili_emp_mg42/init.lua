@@ -16,8 +16,8 @@ ENT.VJ_NPC_Class = {"CLASS_GERMAN"}
 ENT.HasMeleeAttack = false
 
 ENT.HasRangeAttack = true
-ENT.RangeDistance = 5000
-ENT.RangeToMeleeDistance = 1
+ENT.RangeAttackMaxDistance = 5000
+ENT.RangeAttackMinDistance = 1
 ENT.TimeUntilRangeAttackProjectileRelease = 0
 ENT.NextRangeAttackTime = 0.06
 ENT.DisableDefaultRangeAttackCode = true
