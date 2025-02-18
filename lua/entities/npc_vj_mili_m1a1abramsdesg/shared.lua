@@ -3,8 +3,6 @@ ENT.Type 			= "ai"
 ENT.PrintName 		= "Enemy M1 Abrams Desert"
 ENT.Author 			= "DrVrej"
 ENT.Contact 		= "http://steamcommunity.com/groups/vrejgaming"
-ENT.Purpose 		= "Spawn it and fight with it!"
-ENT.Instructions 	= "Click on the spawnicon to spawn it."
 ENT.Category		= "Military"
 ---------------------------------------------------------------------------------------------------------------------------------------------
 if CLIENT then
