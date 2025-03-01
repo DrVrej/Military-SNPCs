@@ -26,7 +26,7 @@ ENT.Tank_DeathDriverCorpse = {"models/VJ_WAFFEN/german_soldier1.mdl","models/VJ_
 
 ---------------------------------------------------------------------------------------------------------------------------------------------
 function ENT:Tank_GunnerSpawnPosition()
-	return self:GetPos() + self:GetUp()*92 + self:GetRight()*-20
+	return self:GetPos() + self:GetUp()*92 + self:GetRight()*-52
 end
 ---------------------------------------------------------------------------------------------------------------------------------------------
 function ENT:UpdateIdleParticles()
