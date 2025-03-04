@@ -20,7 +20,6 @@ ENT.RangeAttackMaxDistance = 5000
 ENT.RangeAttackMinDistance = 1
 ENT.TimeUntilRangeAttackProjectileRelease = 0
 ENT.NextRangeAttackTime = 0.06
-ENT.DisableDefaultRangeAttackCode = true
 ENT.AnimTbl_RangeAttack = false
 
 //ENT.SoundTbl_RangeAttack = {"vj_weapons/m2browning/m2_tp.wav"}
@@ -127,83 +126,85 @@ end
 ---------------------------------------------------------------------------------------------------------------------------------------------
 //local angX90 = Angle(90, 0, 0)
 --
-function ENT:CustomRangeAttackCode()
-	if !IsValid(self.GunModel) then return end
-	self.Emp_CurrentAmmo = self.Emp_CurrentAmmo - 1
-	
-	local ene = self:GetEnemy()
-	local spawnPos = self:GetPos() + self:GetUp() * 50 + self:GetForward() * 10 -- Do NOT use the gun's attachments because parenting breaks attachment positions!
-	local aimPos = self:GetAimPosition(ene, spawnPos, 0)
-	local spread = self:GetAimSpread(ene, aimPos, 1)
-	local bullet = {}
-		bullet.Attacker = self
-		bullet.Src = spawnPos
-		bullet.Dir = (aimPos - spawnPos):GetNormal()
-		bullet.Spread = Vector(spread, spread, 0)
-		bullet.TracerName = "Tracer"
-		bullet.Force = 5
-		bullet.Damage = math.random(5, 20)
-		bullet.AmmoType = "SMG1"
-		/*bullet.Callback = function(attacker, tr, dmginfo)
-			local mat = "doi_impact_concrete"
-			if tr.MatType == MAT_CONCRETE then
-				mat = "doi_impact_concrete"
-			elseif tr.MatType == MAT_DIRT then
-				mat = "doi_impact_dirt"
-			elseif tr.MatType == MAT_GLASS then
-				mat = "doi_impact_glass"
-			elseif tr.MatType == MAT_METAL or tr.MatType == MAT_VENT then
-				mat = "doi_impact_metal"
-			elseif tr.MatType == MAT_SAND then
-				mat = "doi_impact_sand"
-			elseif tr.MatType == MAT_SNOW then
-				mat = "doi_impact_snow"
-			elseif tr.MatType == MAT_WOOD then
-				mat = "doi_impact_wood"
-			elseif tr.MatType == MAT_GRASS then
-				mat = "doi_impact_grass"
-			elseif tr.MatType == MAT_TILE then
-				mat = "doi_impact_tile"
-			elseif tr.MatType == MAT_PLASTIC then
-				mat = "doi_impact_plastic"
-			elseif tr.MatType == MAT_COMPUTER then
-				mat = "doi_impact_computer"
-			elseif tr.MatType == MAT_FOLIAGE then
-				mat = "doi_impact_leaves"
-			elseif tr.MatType == MAT_ANTLION or tr.MatType == MAT_ALIENFLESH or tr.MatType == MAT_FLESH then
-				mat = nil
-			end
-			if mat != nil then
-				ParticleEffect(mat, tr.HitPos, tr.HitNormal:Angle() + angX90)
-			end
-		end*/
-	self.GunModel:FireBullets(bullet)
-	
-	self:PlaySoundSystem("RangeAttack", "vj_weapons/m2browning/m2_tp.wav", VJ.EmitSound)
-	VJ.EmitSound(self, "vj_weapons/m2browning/m2_dist.wav", 110)
-	
-	//ParticleEffectAttach("vj_rifle_full", PATTACH_POINT, self.GunModel, 1)
-	ParticleEffectAttach("vj_military_muzzle_bar", PATTACH_POINT, self.GunModel, 1)
-	ParticleEffectAttach("vj_military_muzzle_garand", PATTACH_POINT, self.GunModel, 1)
-	
-	local bulletShell = EffectData()
-	bulletShell:SetEntity(self.GunModel)
-	bulletShell:SetOrigin(self.GunModel:GetPos() + self:GetForward()*-2 + self:GetUp()*2 + self:GetRight()*5)
-	bulletShell:SetAngles(self.GunModel:GetLocalAngles() + (self.GunModel:GetRight() * -90):Angle())
-	util.Effect("RifleShellEject", bulletShell)
-	
-	local dynLight = ents.Create("light_dynamic")
-	dynLight:SetKeyValue("brightness", "4")
-	dynLight:SetKeyValue("distance", "120")
-	dynLight:SetPos(spawnPos)
-	dynLight:SetLocalAngles(self.GunModel:GetAngles())
-	dynLight:Fire("Color", "255 150 60")
-	dynLight:SetParent(self.GunModel)
-	dynLight:Spawn()
-	dynLight:Activate()
-	dynLight:Fire("TurnOn", "", 0)
-	dynLight:Fire("Kill", "", 0.07)
-	self:DeleteOnRemove(dynLight)
+function ENT:OnRangeAttackExecute(status, enemy, projectile)
+	if status == "Init" then
+		if !IsValid(self.GunModel) then return end
+		self.Emp_CurrentAmmo = self.Emp_CurrentAmmo - 1
+		
+		local spawnPos = self:GetPos() + self:GetUp() * 50 + self:GetForward() * 10 -- Do NOT use the gun's attachments because parenting breaks attachment positions!
+		local aimPos = self:GetAimPosition(enemy, spawnPos, 0)
+		local spread = self:GetAimSpread(enemy, aimPos, 1)
+		local bullet = {}
+			bullet.Attacker = self
+			bullet.Src = spawnPos
+			bullet.Dir = (aimPos - spawnPos):GetNormal()
+			bullet.Spread = Vector(spread, spread, 0)
+			bullet.TracerName = "Tracer"
+			bullet.Force = 5
+			bullet.Damage = math.random(5, 20)
+			bullet.AmmoType = "SMG1"
+			/*bullet.Callback = function(attacker, tr, dmginfo)
+				local mat = "doi_impact_concrete"
+				if tr.MatType == MAT_CONCRETE then
+					mat = "doi_impact_concrete"
+				elseif tr.MatType == MAT_DIRT then
+					mat = "doi_impact_dirt"
+				elseif tr.MatType == MAT_GLASS then
+					mat = "doi_impact_glass"
+				elseif tr.MatType == MAT_METAL or tr.MatType == MAT_VENT then
+					mat = "doi_impact_metal"
+				elseif tr.MatType == MAT_SAND then
+					mat = "doi_impact_sand"
+				elseif tr.MatType == MAT_SNOW then
+					mat = "doi_impact_snow"
+				elseif tr.MatType == MAT_WOOD then
+					mat = "doi_impact_wood"
+				elseif tr.MatType == MAT_GRASS then
+					mat = "doi_impact_grass"
+				elseif tr.MatType == MAT_TILE then
+					mat = "doi_impact_tile"
+				elseif tr.MatType == MAT_PLASTIC then
+					mat = "doi_impact_plastic"
+				elseif tr.MatType == MAT_COMPUTER then
+					mat = "doi_impact_computer"
+				elseif tr.MatType == MAT_FOLIAGE then
+					mat = "doi_impact_leaves"
+				elseif tr.MatType == MAT_ANTLION or tr.MatType == MAT_ALIENFLESH or tr.MatType == MAT_FLESH then
+					mat = nil
+				end
+				if mat != nil then
+					ParticleEffect(mat, tr.HitPos, tr.HitNormal:Angle() + angX90)
+				end
+			end*/
+		self.GunModel:FireBullets(bullet)
+		
+		self:PlaySoundSystem("RangeAttack", "vj_weapons/m2browning/m2_tp.wav", VJ.EmitSound)
+		VJ.EmitSound(self, "vj_weapons/m2browning/m2_dist.wav", 110)
+		
+		//ParticleEffectAttach("vj_rifle_full", PATTACH_POINT, self.GunModel, 1)
+		ParticleEffectAttach("vj_military_muzzle_bar", PATTACH_POINT, self.GunModel, 1)
+		ParticleEffectAttach("vj_military_muzzle_garand", PATTACH_POINT, self.GunModel, 1)
+		
+		local bulletShell = EffectData()
+		bulletShell:SetEntity(self.GunModel)
+		bulletShell:SetOrigin(self.GunModel:GetPos() + self:GetForward()*-2 + self:GetUp()*2 + self:GetRight()*5)
+		bulletShell:SetAngles(self.GunModel:GetLocalAngles() + (self.GunModel:GetRight() * -90):Angle())
+		util.Effect("RifleShellEject", bulletShell)
+		
+		local dynLight = ents.Create("light_dynamic")
+		dynLight:SetKeyValue("brightness", "4")
+		dynLight:SetKeyValue("distance", "120")
+		dynLight:SetPos(spawnPos)
+		dynLight:SetLocalAngles(self.GunModel:GetAngles())
+		dynLight:Fire("Color", "255 150 60")
+		dynLight:SetParent(self.GunModel)
+		dynLight:Spawn()
+		dynLight:Activate()
+		dynLight:Fire("TurnOn", "", 0)
+		dynLight:Fire("Kill", "", 0.07)
+		self:DeleteOnRemove(dynLight)
+		return true
+	end
 end
 ---------------------------------------------------------------------------------------------------------------------------------------------
 function ENT:CustomOnRemove()
