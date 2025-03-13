@@ -10,16 +10,16 @@ ENT.StartHealth = 500
 ---------------------------------------------------------------------------------------------------------------------------------------------
 ENT.VJ_NPC_Class = {"CLASS_RUSSIAN"}
 
-ENT.SoundTbl_Idle = {"vj_military/russian/idle1.wav","vj_military/russian/idle2.wav","vj_military/russian/idle3.wav","vj_military/russian/idle4.wav","vj_military/russian/idle5.wav","vj_military/russian/idle6.wav","vj_military/russian/idle7.wav","vj_military/russian/idle8.wav","vj_military/russian/idle9.wav","vj_military/russian/idle10.wav","vj_military/russian/idle11.wav","vj_military/russian/idle12.wav"}
-ENT.SoundTbl_Alert = {"vj_military/russian/alert1.wav","vj_military/russian/alert2.wav","vj_military/russian/alert3.wav","vj_military/russian/alert4.wav","vj_military/russian/alert5.wav","vj_military/russian/alert6.wav"}
-ENT.SoundTbl_CombatIdle = {"vj_military/russian/attack1.wav","vj_military/russian/attack2.wav","vj_military/russian/attack3.wav","vj_military/russian/attack4.wav","vj_military/russian/attack5.wav","vj_military/russian/attack6.wav","vj_military/russian/attack7.wav","vj_military/russian/attack8.wav","vj_military/russian/attack9.wav","vj_military/russian/attack10.wav","vj_military/russian/attack11.wav","vj_military/russian/attack12.wav"}
+ENT.SoundTbl_Idle = {"vj_military/russian/idle1.wav", "vj_military/russian/idle2.wav", "vj_military/russian/idle3.wav", "vj_military/russian/idle4.wav", "vj_military/russian/idle5.wav", "vj_military/russian/idle6.wav", "vj_military/russian/idle7.wav", "vj_military/russian/idle8.wav", "vj_military/russian/idle9.wav", "vj_military/russian/idle10.wav", "vj_military/russian/idle11.wav", "vj_military/russian/idle12.wav"}
+ENT.SoundTbl_Alert = {"vj_military/russian/alert1.wav", "vj_military/russian/alert2.wav", "vj_military/russian/alert3.wav", "vj_military/russian/alert4.wav", "vj_military/russian/alert5.wav", "vj_military/russian/alert6.wav"}
+ENT.SoundTbl_CombatIdle = {"vj_military/russian/attack1.wav", "vj_military/russian/attack2.wav", "vj_military/russian/attack3.wav", "vj_military/russian/attack4.wav", "vj_military/russian/attack5.wav", "vj_military/russian/attack6.wav", "vj_military/russian/attack7.wav", "vj_military/russian/attack8.wav", "vj_military/russian/attack9.wav", "vj_military/russian/attack10.wav", "vj_military/russian/attack11.wav", "vj_military/russian/attack12.wav"}
 
 -- Custom
 ENT.Tank_GunnerENT = "npc_vj_mili_t72_sovietg"
 ENT.Tank_AngleOffset = 180
 ENT.Tank_CollisionBoundSize = 90
 ENT.Tank_CollisionBoundUp = 100
-ENT.Tank_DeathDriverCorpse = {"models/soviet/soviet_soldier1.mdl","models/soviet/soviet_soldier2.mdl","models/soviet/soviet_soldier3.mdl","models/soviet/soviet_soldier4.mdl","models/soviet/soviet_soldier5.mdl","models/soviet/soviet_soldier6.mdl"}
+ENT.Tank_DeathDriverCorpse = {"models/soviet/soviet_soldier1.mdl", "models/soviet/soviet_soldier2.mdl", "models/soviet/soviet_soldier3.mdl", "models/soviet/soviet_soldier4.mdl", "models/soviet/soviet_soldier5.mdl", "models/soviet/soviet_soldier6.mdl"}
 
 ---------------------------------------------------------------------------------------------------------------------------------------------
 function ENT:Tank_Init()
@@ -28,10 +28,10 @@ function ENT:Tank_Init()
 		self.WhiteLight1:SetPos( self:GetPos() +self:GetForward()*-105 +self:GetRight()*35 +self:GetUp()*45 )
 		self.WhiteLight1:SetKeyValue( "renderfx", "14" )
 		self.WhiteLight1:SetKeyValue( "model", "sprites/glow1.vmt")
-		self.WhiteLight1:SetKeyValue( "scale","0.4")
-		self.WhiteLight1:SetKeyValue( "spawnflags","1")
-		self.WhiteLight1:SetKeyValue( "angles","0 0 0")
-		self.WhiteLight1:SetKeyValue( "rendermode","9")
+		self.WhiteLight1:SetKeyValue( "scale", "0.4")
+		self.WhiteLight1:SetKeyValue( "spawnflags", "1")
+		self.WhiteLight1:SetKeyValue( "angles", "0 0 0")
+		self.WhiteLight1:SetKeyValue( "rendermode", "9")
 		self.WhiteLight1:SetKeyValue( "renderamt", "255")
 		self.WhiteLight1:SetKeyValue( "rendercolor", "255 255 255" )
 		self.WhiteLight1:Spawn()
@@ -44,10 +44,10 @@ function ENT:Tank_Init()
 		self.WhiteLight2:SetPos( self:GetPos() +self:GetForward()*-105 +self:GetRight()*-30 +self:GetUp()*45 )
 		self.WhiteLight2:SetKeyValue( "renderfx", "14" )
 		self.WhiteLight2:SetKeyValue( "model", "sprites/glow1.vmt")
-		self.WhiteLight2:SetKeyValue( "scale","0.4")
-		self.WhiteLight2:SetKeyValue( "spawnflags","1")
-		self.WhiteLight2:SetKeyValue( "angles","0 0 0")
-		self.WhiteLight2:SetKeyValue( "rendermode","9")
+		self.WhiteLight2:SetKeyValue( "scale", "0.4")
+		self.WhiteLight2:SetKeyValue( "spawnflags", "1")
+		self.WhiteLight2:SetKeyValue( "angles", "0 0 0")
+		self.WhiteLight2:SetKeyValue( "rendermode", "9")
 		self.WhiteLight2:SetKeyValue( "renderamt", "255")
 		self.WhiteLight2:SetKeyValue( "rendercolor", "255 255 255" )
 		self.WhiteLight2:Spawn()
@@ -60,7 +60,7 @@ function ENT:Tank_Init()
 		self.ActualLight1:SetKeyValue("brightness", "2")
 		self.ActualLight1:SetKeyValue("distance", "150")
 		self.ActualLight1:SetLocalPos(self.WhiteLight1:GetPos())
-		self.ActualLight1:SetLocalAngles( self:GetAngles() +Angle(0,180,0) )
+		self.ActualLight1:SetLocalAngles( self:GetAngles() +Angle(0, 180, 0) )
 		//self.ActualLight1:Fire("LightColor", "255 255 255")
 		self.ActualLight1:SetParent(self)
 		self.ActualLight1:Spawn()
@@ -73,7 +73,7 @@ function ENT:Tank_Init()
 		self.ActualLight2:SetKeyValue("brightness", "2")
 		self.ActualLight2:SetKeyValue("distance", "150")
 		self.ActualLight2:SetLocalPos(self.WhiteLight2:GetPos())
-		self.ActualLight2:SetLocalAngles( self:GetAngles() +Angle(0,180,0) )
+		self.ActualLight2:SetLocalAngles( self:GetAngles() +Angle(0, 180, 0) )
 		//self.ActualLight2:Fire("LightColor", "255 255 255")
 		self.ActualLight2:SetParent(self)
 		self.ActualLight2:Spawn()

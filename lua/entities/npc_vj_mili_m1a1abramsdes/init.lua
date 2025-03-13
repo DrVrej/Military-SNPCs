@@ -10,11 +10,11 @@ ENT.StartHealth = 500
 ---------------------------------------------------------------------------------------------------------------------------------------------
 ENT.VJ_NPC_Class = {"CLASS_UNITED_STATES"}
 
-ENT.SoundTbl_Idle = {"vj_military/english_american/idle1.wav","vj_military/english_american/idle2.wav","vj_military/english_american/idle3.wav","vj_military/english_american/idle4.wav","vj_military/english_american/idle5.wav","vj_military/english_american/idle6.wav","vj_military/english_american/idle7.wav","vj_military/english_american/idle8.wav","vj_military/english_american/idle9.wav","vj_military/english_american/idle10.wav","vj_military/english_american/idle11.wav","vj_military/english_american/idle12.wav"}
-ENT.SoundTbl_ReceiveOrder = {"vj_military/english_american/yes1.wav","vj_military/english_american/yes2.wav","vj_military/english_american/yes3.wav","vj_military/english_american/yes4.wav","vj_military/english_american/yes5.wav","vj_military/english_american/yes6.wav","vj_military/english_american/yes7.wav","vj_military/english_american/yes8.wav"}
-ENT.SoundTbl_Alert = {"vj_military/english_american/alert1.wav","vj_military/english_american/alert2.wav","vj_military/english_american/alert3.wav","vj_military/english_american/alert4.wav","vj_military/english_american/alert5.wav","vj_military/english_american/alert6.wav"}
-ENT.SoundTbl_CallForHelp = {"vj_military/english_american/help1.wav","vj_military/english_american/help2.wav","vj_military/english_american/help3.wav","vj_military/english_american/help4.wav","vj_military/english_american/help5.wav","vj_military/english_american/help6.wav","vj_military/english_american/help7.wav","vj_military/english_american/help8.wav"}
-ENT.SoundTbl_CombatIdle = {"vj_military/english_american/attack1.wav","vj_military/english_american/attack2.wav","vj_military/english_american/attack3.wav","vj_military/english_american/attack4.wav","vj_military/english_american/attack5.wav","vj_military/english_american/attack6.wav","vj_military/english_american/attack7.wav","vj_military/english_american/attack8.wav","vj_military/english_american/attack9.wav"}
+ENT.SoundTbl_Idle = {"vj_military/english_american/idle1.wav", "vj_military/english_american/idle2.wav", "vj_military/english_american/idle3.wav", "vj_military/english_american/idle4.wav", "vj_military/english_american/idle5.wav", "vj_military/english_american/idle6.wav", "vj_military/english_american/idle7.wav", "vj_military/english_american/idle8.wav", "vj_military/english_american/idle9.wav", "vj_military/english_american/idle10.wav", "vj_military/english_american/idle11.wav", "vj_military/english_american/idle12.wav"}
+ENT.SoundTbl_ReceiveOrder = {"vj_military/english_american/yes1.wav", "vj_military/english_american/yes2.wav", "vj_military/english_american/yes3.wav", "vj_military/english_american/yes4.wav", "vj_military/english_american/yes5.wav", "vj_military/english_american/yes6.wav", "vj_military/english_american/yes7.wav", "vj_military/english_american/yes8.wav"}
+ENT.SoundTbl_Alert = {"vj_military/english_american/alert1.wav", "vj_military/english_american/alert2.wav", "vj_military/english_american/alert3.wav", "vj_military/english_american/alert4.wav", "vj_military/english_american/alert5.wav", "vj_military/english_american/alert6.wav"}
+ENT.SoundTbl_CallForHelp = {"vj_military/english_american/help1.wav", "vj_military/english_american/help2.wav", "vj_military/english_american/help3.wav", "vj_military/english_american/help4.wav", "vj_military/english_american/help5.wav", "vj_military/english_american/help6.wav", "vj_military/english_american/help7.wav", "vj_military/english_american/help8.wav"}
+ENT.SoundTbl_CombatIdle = {"vj_military/english_american/attack1.wav", "vj_military/english_american/attack2.wav", "vj_military/english_american/attack3.wav", "vj_military/english_american/attack4.wav", "vj_military/english_american/attack5.wav", "vj_military/english_american/attack6.wav", "vj_military/english_american/attack7.wav", "vj_military/english_american/attack8.wav", "vj_military/english_american/attack9.wav"}
 
 -- Tank Base
 ENT.Tank_GunnerENT = "npc_vj_mili_m1a1abramsdesg"
@@ -31,10 +31,10 @@ function ENT:Tank_Init()
 		self.WhiteLight1:SetPos( self:GetPos() +self:GetForward()*-150 +self:GetRight()*33 +self:GetUp()*50 )
 		self.WhiteLight1:SetKeyValue( "renderfx", "14" )
 		self.WhiteLight1:SetKeyValue( "model", "sprites/glow1.vmt")
-		self.WhiteLight1:SetKeyValue( "scale","0.8")
-		self.WhiteLight1:SetKeyValue( "spawnflags","1")
-		self.WhiteLight1:SetKeyValue( "angles","0 0 0")
-		self.WhiteLight1:SetKeyValue( "rendermode","9")
+		self.WhiteLight1:SetKeyValue( "scale", "0.8")
+		self.WhiteLight1:SetKeyValue( "spawnflags", "1")
+		self.WhiteLight1:SetKeyValue( "angles", "0 0 0")
+		self.WhiteLight1:SetKeyValue( "rendermode", "9")
 		self.WhiteLight1:SetKeyValue( "renderamt", "255")
 		self.WhiteLight1:SetKeyValue( "rendercolor", "255 255 255" )
 		self.WhiteLight1:Spawn()
@@ -47,10 +47,10 @@ function ENT:Tank_Init()
 		self.WhiteLight2:SetPos( self:GetPos() +self:GetForward()*-150 +self:GetRight()*-33 +self:GetUp()*50 )
 		self.WhiteLight2:SetKeyValue( "renderfx", "14" )
 		self.WhiteLight2:SetKeyValue( "model", "sprites/glow1.vmt")
-		self.WhiteLight2:SetKeyValue( "scale","0.8")
-		self.WhiteLight2:SetKeyValue( "spawnflags","1")
-		self.WhiteLight2:SetKeyValue( "angles","0 0 0")
-		self.WhiteLight2:SetKeyValue( "rendermode","9")
+		self.WhiteLight2:SetKeyValue( "scale", "0.8")
+		self.WhiteLight2:SetKeyValue( "spawnflags", "1")
+		self.WhiteLight2:SetKeyValue( "angles", "0 0 0")
+		self.WhiteLight2:SetKeyValue( "rendermode", "9")
 		self.WhiteLight2:SetKeyValue( "renderamt", "255")
 		self.WhiteLight2:SetKeyValue( "rendercolor", "255 255 255" )
 		self.WhiteLight2:Spawn()
@@ -63,7 +63,7 @@ function ENT:Tank_Init()
 		self.ActualLight1:SetKeyValue("brightness", "2")
 		self.ActualLight1:SetKeyValue("distance", "150")
 		self.ActualLight1:SetLocalPos(self.WhiteLight1:GetPos())
-		self.ActualLight1:SetLocalAngles( self:GetAngles() +Angle(0,180,0) )
+		self.ActualLight1:SetLocalAngles( self:GetAngles() +Angle(0, 180, 0) )
 		//self.ActualLight1:Fire("LightColor", "255 255 255")
 		self.ActualLight1:SetParent(self)
 		self.ActualLight1:Spawn()
@@ -76,7 +76,7 @@ function ENT:Tank_Init()
 		self.ActualLight2:SetKeyValue("brightness", "2")
 		self.ActualLight2:SetKeyValue("distance", "150")
 		self.ActualLight2:SetLocalPos(self.WhiteLight2:GetPos())
-		self.ActualLight2:SetLocalAngles( self:GetAngles() +Angle(0,180,0) )
+		self.ActualLight2:SetLocalAngles( self:GetAngles() +Angle(0, 180, 0) )
 		//self.ActualLight2:Fire("LightColor", "255 255 255")
 		self.ActualLight2:SetParent(self)
 		self.ActualLight2:Spawn()

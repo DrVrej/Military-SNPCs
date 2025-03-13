@@ -12,6 +12,6 @@ ENT.VJ_NPC_Class = {"CLASS_RUSSIAN"}
 
 -- Tank Base
 ENT.Tank_AngleOffset = 180
-ENT.Tank_Shell_SpawnPos = Vector(-170,0,65)
-ENT.Tank_Shell_MuzzleFlashPos = Vector(-300,0,64)
-ENT.Tank_Shell_ParticlePos = Vector(-226,00,65)
+ENT.Tank_Shell_SpawnPos = Vector(-170, 0, 65)
+ENT.Tank_Shell_MuzzleFlashPos = Vector(-300, 0, 64)
+ENT.Tank_Shell_ParticlePos = Vector(-226, 00, 65)

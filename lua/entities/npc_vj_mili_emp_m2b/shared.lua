@@ -6,7 +6,7 @@ ENT.Contact 		= "http://steamcommunity.com/groups/vrejgaming"
 ENT.Category		= "Military"
 
 if (CLIENT) then
-	local soldierMDLs = {"models/VJ_UNITEDSTATES/airbrone1.mdl","models/VJ_UNITEDSTATES/airbrone2.mdl","models/VJ_UNITEDSTATES/airbrone3.mdl","models/VJ_UNITEDSTATES/airbrone4.mdl","models/VJ_UNITEDSTATES/airbrone5.mdl","models/VJ_UNITEDSTATES/airbrone6.mdl","models/VJ_UNITEDSTATES/airbrone7.mdl","models/VJ_UNITEDSTATES/airbrone8.mdl","models/VJ_UNITEDSTATES/airbrone9.mdl"}
+	local soldierMDLs = {"models/VJ_UNITEDSTATES/airbrone1.mdl", "models/VJ_UNITEDSTATES/airbrone2.mdl", "models/VJ_UNITEDSTATES/airbrone3.mdl", "models/VJ_UNITEDSTATES/airbrone4.mdl", "models/VJ_UNITEDSTATES/airbrone5.mdl", "models/VJ_UNITEDSTATES/airbrone6.mdl", "models/VJ_UNITEDSTATES/airbrone7.mdl", "models/VJ_UNITEDSTATES/airbrone8.mdl", "models/VJ_UNITEDSTATES/airbrone9.mdl"}
 	--
 	function ENT:Draw()
 		self:DrawModel()

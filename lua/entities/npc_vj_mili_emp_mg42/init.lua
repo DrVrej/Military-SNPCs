@@ -80,7 +80,7 @@ function ENT:OnThinkActive()
 			gunModel:ResetSequence(gunModel:LookupSequence("reload"))
 			gunModel:ResetSequenceInfo()
 			gunModel:SetCycle(0)
-			timer.Simple(0.6,function()
+			timer.Simple(0.6, function()
 				if IsValid(self) then
 					gunModel:SetBodygroup(1, 1)
 					local reloadBox = self.ReloadAmmoBox
@@ -104,7 +104,7 @@ function ENT:OnThinkActive()
 					timer.Simple(5, function() if IsValid(reloadBox) then reloadBox:Remove() end end)
 				end
 			end)
-			timer.Simple(1.8,function()
+			timer.Simple(1.8, function()
 				if IsValid(self) && IsValid(gunModel) then
 					gunModel:SetBodygroup(1, 0)
 					gunModel:SetBodygroup(2, 0)

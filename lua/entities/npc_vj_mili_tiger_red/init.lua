@@ -10,11 +10,11 @@ ENT.StartHealth = 500
 ---------------------------------------------------------------------------------------------------------------------------------------------
 ENT.VJ_NPC_Class = {"CLASS_GERMAN"}
 
-ENT.SoundTbl_Idle = {"vj_military/german/objectiveclear1.wav","vj_military/german/objectiveclear2.wav","vj_military/german/objectiveclear3.wav","vj_military/german/objectiveclear4.wav","vj_military/german/objectiveclear5.wav","vj_military/german/spreadout1.wav","vj_military/german/spreadout2.wav","vj_military/german/sticktogether1.wav","vj_military/german/sticktogether2.wav","vj_military/german/statusreport1.wav","vj_military/german/statusreport2.wav","vj_military/german/raid_decoy1.wav","vj_military/german/raid_decoy2.wav","vj_military/german/raid_decoy3.wav","vj_military/german/raid_decoy4.wav","vj_military/german/raid_decoy5.wav"}
-ENT.SoundTbl_CombatIdle = {"vj_military/german/ontheway1.wav","vj_military/german/ontheway2.wav","vj_military/german/ontheway3.wav","vj_military/german/ontheway4.wav","vj_military/german/go1.wav","vj_military/german/go2.wav","vj_military/german/go3.wav","vj_military/german/go4.wav","vj_military/german/moving1.wav","vj_military/german/moving2.wav","vj_military/german/moving3.wav","vj_military/german/moving4.wav","vj_military/german/moving5.wav"}
-ENT.SoundTbl_ReceiveOrder = {"vj_military/german/affirmative1.wav","vj_military/german/affirmative2.wav","vj_military/german/affirmative3.wav","vj_military/german/affirmative4.wav"}
-ENT.SoundTbl_Alert = {"vj_military/german/alert1.wav","vj_military/german/alert2.wav","vj_military/german/alert3.wav","vj_military/german/alert4.wav","vj_military/german/alert5.wav"}
-ENT.SoundTbl_CallForHelp = {"vj_military/german/needbackup1.wav","vj_military/german/needbackup2.wav","vj_military/german/needbackup3.wav","vj_military/german/needbackup4.wav","vj_military/german/requestreinforcements1.wav","vj_military/german/requestreinforcements2.wav","vj_military/german/requestreinforcements3.wav","vj_military/german/requestreinforcements4.wav"}
+ENT.SoundTbl_Idle = {"vj_military/german/objectiveclear1.wav", "vj_military/german/objectiveclear2.wav", "vj_military/german/objectiveclear3.wav", "vj_military/german/objectiveclear4.wav", "vj_military/german/objectiveclear5.wav", "vj_military/german/spreadout1.wav", "vj_military/german/spreadout2.wav", "vj_military/german/sticktogether1.wav", "vj_military/german/sticktogether2.wav", "vj_military/german/statusreport1.wav", "vj_military/german/statusreport2.wav", "vj_military/german/raid_decoy1.wav", "vj_military/german/raid_decoy2.wav", "vj_military/german/raid_decoy3.wav", "vj_military/german/raid_decoy4.wav", "vj_military/german/raid_decoy5.wav"}
+ENT.SoundTbl_CombatIdle = {"vj_military/german/ontheway1.wav", "vj_military/german/ontheway2.wav", "vj_military/german/ontheway3.wav", "vj_military/german/ontheway4.wav", "vj_military/german/go1.wav", "vj_military/german/go2.wav", "vj_military/german/go3.wav", "vj_military/german/go4.wav", "vj_military/german/moving1.wav", "vj_military/german/moving2.wav", "vj_military/german/moving3.wav", "vj_military/german/moving4.wav", "vj_military/german/moving5.wav"}
+ENT.SoundTbl_ReceiveOrder = {"vj_military/german/affirmative1.wav", "vj_military/german/affirmative2.wav", "vj_military/german/affirmative3.wav", "vj_military/german/affirmative4.wav"}
+ENT.SoundTbl_Alert = {"vj_military/german/alert1.wav", "vj_military/german/alert2.wav", "vj_military/german/alert3.wav", "vj_military/german/alert4.wav", "vj_military/german/alert5.wav"}
+ENT.SoundTbl_CallForHelp = {"vj_military/german/needbackup1.wav", "vj_military/german/needbackup2.wav", "vj_military/german/needbackup3.wav", "vj_military/german/needbackup4.wav", "vj_military/german/requestreinforcements1.wav", "vj_military/german/requestreinforcements2.wav", "vj_military/german/requestreinforcements3.wav", "vj_military/german/requestreinforcements4.wav"}
 
 -- Tank Base
 ENT.Tank_GunnerENT = "npc_vj_mili_tiger_redg"
@@ -22,7 +22,7 @@ ENT.Tank_AngleOffset = -90
 ENT.Tank_DriveAwayDistance = 600
 ENT.Tank_CollisionBoundSize = 140
 ENT.Tank_CollisionBoundUp = 120
-ENT.Tank_DeathDriverCorpse = {"models/VJ_WAFFEN/german_soldier1.mdl","models/VJ_WAFFEN/german_soldier2.mdl","models/VJ_WAFFEN/german_soldier3.mdl","models/VJ_WAFFEN/german_soldier4.mdl","models/VJ_WAFFEN/german_soldier5.mdl","models/VJ_WAFFEN/german_soldier6.mdl"}
+ENT.Tank_DeathDriverCorpse = {"models/VJ_WAFFEN/german_soldier1.mdl", "models/VJ_WAFFEN/german_soldier2.mdl", "models/VJ_WAFFEN/german_soldier3.mdl", "models/VJ_WAFFEN/german_soldier4.mdl", "models/VJ_WAFFEN/german_soldier5.mdl", "models/VJ_WAFFEN/german_soldier6.mdl"}
 
 ---------------------------------------------------------------------------------------------------------------------------------------------
 function ENT:Tank_GunnerSpawnPosition()

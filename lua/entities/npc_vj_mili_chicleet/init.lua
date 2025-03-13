@@ -21,11 +21,11 @@ ENT.NextAnyAttackTime_Melee = 0.4
 ENT.HasDeathCorpse = false
 ENT.GibOnDeathFilter = false
 
-ENT.SoundTbl_Idle = {"vj_military/chicleet/idle1.wav","vj_military/chicleet/idle2.wav","vj_military/chicleet/idle3.wav","vj_military/chicleet/idle4.wav","vj_military/chicleet/idle5.wav"}
-ENT.SoundTbl_Alert = {"vj_military/chicleet/alert1.wav","vj_military/chicleet/alert2.wav"}
-ENT.SoundTbl_MeleeAttack = {"vj_military/chicleet/attack1.wav","vj_military/chicleet/attack2.wav"}
-ENT.SoundTbl_MeleeAttackMiss = {"npc/zombie/claw_miss1.wav","npc/zombie/claw_miss2.wav"}
-ENT.SoundTbl_Pain = {"vj_military/chicleet/pain1.wav","vj_military/chicleet/pain2.wav","vj_military/chicleet/pain3.wav"}
+ENT.SoundTbl_Idle = {"vj_military/chicleet/idle1.wav", "vj_military/chicleet/idle2.wav", "vj_military/chicleet/idle3.wav", "vj_military/chicleet/idle4.wav", "vj_military/chicleet/idle5.wav"}
+ENT.SoundTbl_Alert = {"vj_military/chicleet/alert1.wav", "vj_military/chicleet/alert2.wav"}
+ENT.SoundTbl_MeleeAttack = {"vj_military/chicleet/attack1.wav", "vj_military/chicleet/attack2.wav"}
+ENT.SoundTbl_MeleeAttackMiss = {"npc/zombie/claw_miss1.wav", "npc/zombie/claw_miss2.wav"}
+ENT.SoundTbl_Pain = {"vj_military/chicleet/pain1.wav", "vj_military/chicleet/pain2.wav", "vj_military/chicleet/pain3.wav"}
 ENT.SoundTbl_Death = "vj_military/chicleet/death1.wav"
 ---------------------------------------------------------------------------------------------------------------------------------------------
 function ENT:Init()
