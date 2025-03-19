@@ -120,8 +120,10 @@ function ENT:OnThinkActive()
 	end
 end
 ---------------------------------------------------------------------------------------------------------------------------------------------
-function ENT:CustomAttackCheck_RangeAttack()
-	return self.Emp_CurrentAmmo > 0
+function ENT:OnRangeAttack(status, enemy)
+	if status == "PreInit" then
+		return self.Emp_CurrentAmmo <= 0
+	end
 end
 ---------------------------------------------------------------------------------------------------------------------------------------------
 //local angX90 = Angle(90, 0, 0)
