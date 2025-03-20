@@ -85,7 +85,7 @@ function ENT:Tank_Init()
 	end
 end
 ---------------------------------------------------------------------------------------------------------------------------------------------
-function ENT:UpdateIdleParticles()
+function ENT:Tank_UpdateIdleParticles()
 	local effectData = EffectData()
 	effectData:SetScale(1)
 	effectData:SetEntity(self)
@@ -95,7 +95,7 @@ function ENT:UpdateIdleParticles()
 	util.Effect("VJ_VehicleExhaust", effectData, true, true)
 end
 ---------------------------------------------------------------------------------------------------------------------------------------------
-function ENT:UpdateMoveParticles()
+function ENT:Tank_UpdateMoveParticles()
 	local effectData = EffectData()
 	effectData:SetScale(1)
 	effectData:SetEntity(self)

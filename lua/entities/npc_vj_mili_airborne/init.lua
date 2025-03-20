@@ -14,7 +14,6 @@ ENT.BloodColor = VJ.BLOOD_COLOR_RED
 ENT.HasMeleeAttack = true
 ENT.MeleeAttackDamage = 10
 ENT.HasGrenadeAttack = true -- Should the SNPC have a grenade attack?
-
 ENT.CanFlinch = true
 
 ENT.SoundTbl_Idle = {"vj_military/english_american/idle1.wav", "vj_military/english_american/idle2.wav", "vj_military/english_american/idle3.wav", "vj_military/english_american/idle4.wav", "vj_military/english_american/idle5.wav", "vj_military/english_american/idle6.wav", "vj_military/english_american/idle7.wav", "vj_military/english_american/idle8.wav", "vj_military/english_american/idle9.wav", "vj_military/english_american/idle10.wav", "vj_military/english_american/idle11.wav", "vj_military/english_american/idle12.wav"}
@@ -36,9 +35,9 @@ function ENT:Init()
 	if math.random(1, 5) == 1 then self.IsMedic = true end
 end
 ---------------------------------------------------------------------------------------------------------------------------------------------
-function ENT:OnCreateDeathCorpse(dmginfo, hitgroup, corpseEnt)
+function ENT:OnCreateDeathCorpse(dmginfo, hitgroup, corpse)
 	if dmginfo:GetDamageType() == DMG_BLAST or hitgroup == HITGROUP_HEAD then
-		corpseEnt:SetBodygroup(2, 1)
-		self:CreateExtraDeathCorpse("prop_physics", "models/VJ_UNITEDSTATES/helmet.mdl", {Pos = corpseEnt:GetAttachment(corpseEnt:LookupAttachment("anim_attachment_head")).Pos})
+		corpse:SetBodygroup(2, 1)
+		self:CreateExtraDeathCorpse("prop_physics", "models/VJ_UNITEDSTATES/helmet.mdl", {Pos = corpse:GetAttachment(corpse:LookupAttachment("anim_attachment_head")).Pos})
 	end
 end
