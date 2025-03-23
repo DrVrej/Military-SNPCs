@@ -133,7 +133,7 @@ function ENT:OnRangeAttackExecute(status, enemy, projectile)
 		if !IsValid(self.GunModel) then return end
 		self.Emp_CurrentAmmo = self.Emp_CurrentAmmo - 1
 		
-		local spawnPos = self:GetPos() + self:GetUp() * 50 + self:GetForward() * 10 -- Do NOT use the gun's attachments because parenting breaks attachment positions!
+		local spawnPos = self.GunModel:GetPos() -- Do NOT use the gun's attachments because parenting breaks attachment positions!
 		local aimPos = self:GetAimPosition(enemy, spawnPos, 0)
 		local spread = self:GetAimSpread(enemy, aimPos, 1)
 		local bullet = {}
